@@ -520,6 +520,7 @@ footer {
 }
 .footer-brand {
   justify-self: start;
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
 }
 .footer-brand img {
   height: 72px;
@@ -529,10 +530,11 @@ footer {
 footer p {
   margin: 0;
   color: #6c6770;
-  font-size: 0.62rem;
+  font-size: clamp(0.75rem, 0.9vw, 0.88rem);
+  line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
 }
 footer p:last-child {
   justify-self: end;
@@ -563,10 +565,6 @@ footer p:last-child {
     width: auto;
     height: 68.4px;
     max-height: 95%;
-  }
-  .footer-brand img {
-    height: 48px;
-    max-height: 80%;
   }
   .footer-brand img {
     height: 48px;
@@ -721,8 +719,16 @@ footer p:last-child {
   }
   footer {
     grid-template-columns: 1fr;
+    gap: 1rem;
     justify-items: center;
+    padding: 1.5rem 1.25rem;
     text-align: center;
+  }
+  .footer-brand {
+    font-size: 1.15rem;
+  }
+  footer p {
+    font-size: 0.75rem;
   }
   .footer-brand,
   footer p:last-child {
