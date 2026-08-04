@@ -238,11 +238,9 @@ h2 {
 .section-heading > p {
   max-width: 460px;
   margin-bottom: 0.25rem;
-  padding-left: clamp(1.25rem, 2vw, 2rem);
   color: #5f5a66;
-  border-left: 1px solid #a9a4bc;
-  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
-  line-height: 1.55;
+  font-size: clamp(1.35rem, 1.75vw, 1.7rem);
+  line-height: 1.45;
 }
 .service-grid {
   display: grid;
@@ -659,8 +657,6 @@ footer p:last-child {
     line-height: 0.95;
   }
   .section-heading > p {
-    padding-left: 0;
-    border-left: 0;
     font-size: 1rem;
     line-height: 1.7;
   }
