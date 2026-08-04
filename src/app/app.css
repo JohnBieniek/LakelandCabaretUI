@@ -355,7 +355,8 @@ h2 {
 }
 
 .pricing {
-  padding: clamp(2.25rem, 4vw, 4.5rem) clamp(1.5rem, 6vw, 7.5rem);
+  padding: clamp(1.25rem, 2vw, 2.25rem) clamp(1.5rem, 6vw, 7.5rem)
+    clamp(2.25rem, 4vw, 4.5rem);
   background: var(--paper);
 }
 .pricing-intro {
@@ -434,7 +435,7 @@ h2 {
 .contact {
   position: relative;
   overflow: hidden;
-  padding: clamp(3rem, 5vw, 5rem) 1.5rem 4rem;
+  padding: clamp(2rem, 3vw, 3rem) 1.5rem 4rem;
   color: white;
   background: var(--blue);
   text-align: center;
@@ -628,9 +629,11 @@ footer p:last-child {
   .vertical-note {
     display: none;
   }
-  .services,
-  .pricing {
+  .services {
     padding: 3.5rem 1.25rem;
+  }
+  .pricing {
+    padding: 1.5rem 1.25rem 3.5rem;
   }
   .section-heading {
     grid-template-columns: 1fr;
@@ -678,6 +681,9 @@ footer p:last-child {
   }
   .pricing-note {
     margin-left: 0;
+  }
+  .contact {
+    padding-top: 2rem;
   }
   .contact-actions {
     flex-direction: column;
