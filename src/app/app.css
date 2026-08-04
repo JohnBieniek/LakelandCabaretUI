@@ -40,8 +40,8 @@
 }
 .brand img {
   width: auto;
-  height: 84px;
-  max-height: 92%;
+  height: 92px;
+  max-height: 96%;
   object-fit: contain;
 }
 .brand i {
@@ -547,8 +547,8 @@ footer p:last-child {
   }
   .brand img {
     width: auto;
-    height: 64px;
-    max-height: 88%;
+    height: 72px;
+    max-height: 95%;
   }
   .footer-brand img {
     height: 48px;
