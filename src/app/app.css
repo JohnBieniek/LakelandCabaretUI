@@ -501,7 +501,7 @@ footer {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 2rem;
-  padding: 2rem clamp(1.5rem, 4vw, 4rem);
+  padding: 1rem clamp(1.5rem, 4vw, 4rem);
   background: var(--cream);
 }
 .footer-brand {
