@@ -285,10 +285,11 @@ h2 {
 }
 .service-copy h3 {
   margin-bottom: 1rem;
-  font-family: 'Italiana', serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: clamp(2rem, 3vw, 3.5rem);
-  font-weight: 400;
-  letter-spacing: -0.04em;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
 }
 .service-copy > p:not(.eyebrow) {
   color: #615c67;
