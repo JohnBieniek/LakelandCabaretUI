@@ -506,6 +506,11 @@ footer {
 .footer-brand {
   justify-self: start;
 }
+.footer-brand img {
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+}
 footer p {
   margin: 0;
   color: #6c6770;
@@ -543,6 +548,10 @@ footer p:last-child {
     width: auto;
     height: 64px;
     max-height: 88%;
+  }
+  .footer-brand img {
+    height: 48px;
+    max-height: 80%;
   }
   .menu-toggle {
     position: relative;
