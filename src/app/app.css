@@ -192,30 +192,6 @@ h2 em {
   object-position: 50% 45%;
   filter: saturate(0.75) contrast(1.03);
 }
-.sun-mark {
-  position: absolute;
-  bottom: 13%;
-  left: -72px;
-  width: 145px;
-  height: 145px;
-  display: grid;
-  place-items: center;
-  color: var(--ink);
-  background: var(--sun);
-  border-radius: 50%;
-  box-shadow: 0 0 0 10px var(--blue);
-}
-.sun-mark::before {
-  content: '';
-  position: absolute;
-  inset: 15px;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-}
-.sun-mark span {
-  font-family: 'Italiana', serif;
-  font-size: 2rem;
-}
 .vertical-note {
   position: absolute;
   right: 1.25rem;
@@ -226,25 +202,6 @@ h2 em {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   writing-mode: vertical-rl;
-}
-.hero-orbit {
-  position: absolute;
-  z-index: 1;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-  pointer-events: none;
-}
-.orbit-one {
-  width: 40vw;
-  height: 40vw;
-  left: -19vw;
-  top: 30%;
-}
-.orbit-two {
-  width: 22vw;
-  height: 22vw;
-  left: 39%;
-  top: 13%;
 }
 .manifesto {
   display: grid;
@@ -674,14 +631,6 @@ footer p:last-child {
   }
   .photo-frame {
     border-radius: 48% 48% 2px 2px / 28% 28% 2px 2px;
-  }
-  .sun-mark {
-    left: auto;
-    right: 0.6rem;
-    bottom: 2.5rem;
-    width: 100px;
-    height: 100px;
-    box-shadow: 0 0 0 7px var(--blue);
   }
   .vertical-note {
     display: none;
