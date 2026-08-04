@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 interface Service {
-  number: string;
   title: string;
   eyebrow: string;
   description: string;
@@ -27,7 +26,6 @@ export class App {
 
   protected readonly services: Service[] = [
     {
-      number: '01',
       title: 'Music & DJ',
       eyebrow: 'Set the tone',
       description:
@@ -37,7 +35,6 @@ export class App {
       detail: 'Custom playlists available',
     },
     {
-      number: '02',
       title: 'Fire Performance',
       eyebrow: 'Light up the night',
       description:
@@ -47,7 +44,6 @@ export class App {
       detail: 'Indoor and outdoor options',
     },
     {
-      number: '03',
       title: 'Photo & Video',
       eyebrow: 'Keep the moment',
       description:
@@ -57,7 +53,6 @@ export class App {
       detail: 'Flexible session lengths',
     },
     {
-      number: '04',
       title: 'Wedding Officiant',
       eyebrow: 'Make it official',
       description:

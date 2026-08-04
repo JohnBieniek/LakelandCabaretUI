@@ -3,7 +3,7 @@
 <header class="site-header">
   <a class="brand" href="#top" aria-label="Lakeland Cabaret home" (click)="closeMenu()">
     <img src="/images/logo.png" alt="" width="54" height="54" />
-    <span>Lakeland <i>Cabaret</i></span>
+    <span>Lakeland Cabaret</span>
   </a>
 
   <button
@@ -32,7 +32,8 @@
       <p class="kicker"><span></span> Mid-Michigan entertainment collective</p>
       <h1>Every event<br />deserves a little <em>wonder.</em></h1>
       <p class="hero-intro">
-        Music, fire performance, photography, videography, and wedding ceremonies—brought together by one delightfully unconventional team.
+        Music, fire performance, photography, videography, and wedding ceremonies—brought together
+        by one delightfully unconventional team.
       </p>
       <div class="hero-actions">
         <a class="button button-primary" href="#contact">Tell us your idea <span>↗</span></a>
@@ -42,15 +43,14 @@
 
     <div class="hero-visual" aria-label="Lakeland Cabaret performers">
       <div class="photo-frame">
-        <img src="/images/hero.webp" alt="The Lakeland Cabaret team at a lakeside event" fetchpriority="high" />
+        <img
+          src="/images/hero.webp"
+          alt="The Lakeland Cabaret team at a lakeside event"
+          fetchpriority="high"
+        />
       </div>
       <div class="sun-mark" aria-hidden="true"><span>LC</span></div>
       <p class="vertical-note">Est. in Michigan · Made for memorable nights</p>
-    </div>
-
-    <div class="hero-foot">
-      <p>Based in Mid-Michigan</p>
-      <p>Available for celebrations of every size</p>
     </div>
   </section>
 
@@ -67,15 +67,17 @@
         <p class="section-label">What we bring</p>
         <h2>One creative team.<br /><em>So many possibilities.</em></h2>
       </div>
-      <p>Choose one service or combine a few. We’ll shape the experience around your people, your place, and your vision.</p>
+      <p>
+        Choose one service or combine a few. We’ll shape the experience around your people, your
+        place, and your vision.
+      </p>
     </div>
 
     <div class="service-grid">
-      @for (service of services; track service.number) {
+      @for (service of services; track service.title) {
         <article class="service-card">
           <div class="service-image">
             <img [src]="service.image" [alt]="service.imageAlt" loading="lazy" />
-            <span>{{ service.number }}</span>
           </div>
           <div class="service-copy">
             <p class="eyebrow">{{ service.eyebrow }}</p>
@@ -90,17 +92,23 @@
 
   <section class="about" id="about">
     <div class="about-image">
-      <img src="/images/performer.webp" alt="Lakeland Cabaret DJ in costume at a Halloween event" loading="lazy" />
+      <img
+        src="/images/performer.webp"
+        alt="Lakeland Cabaret DJ in costume at a Halloween event"
+        loading="lazy"
+      />
       <span class="image-caption">Playful by nature<br />Professional by practice</span>
     </div>
     <div class="about-copy">
       <p class="section-label">Meet Lakeland Cabaret</p>
       <h2>Good events feel effortless. <em>That takes care.</em></h2>
       <p class="lead">
-        Lakeland Cabaret is a small, multi-talented entertainment team built for people who want their celebration to feel personal—not packaged.
+        Lakeland Cabaret is a small, multi-talented entertainment team built for people who want
+        their celebration to feel personal—not packaged.
       </p>
       <p>
-        Not sure what you need yet? That’s completely fine. Bring us the occasion, the mood, or even half an idea. We’ll help turn it into a plan that feels unmistakably yours.
+        Not sure what you need yet? That’s completely fine. Bring us the occasion, the mood, or even
+        half an idea. We’ll help turn it into a plan that feels unmistakably yours.
       </p>
       <a class="text-link dark" href="#contact">Start a conversation <span>↗</span></a>
     </div>
@@ -110,20 +118,27 @@
     <div class="pricing-intro">
       <p class="section-label">Straightforward starting points</p>
       <h2>Services &amp; <em>pricing</em></h2>
-      <p>Every event is different. These prices are a useful starting point; contact us for a quote tailored to your date, location, and plans.</p>
+      <p>
+        Every event is different. These prices are a useful starting point; contact us for a quote
+        tailored to your date, location, and plans.
+      </p>
     </div>
 
     <div class="price-groups">
-      @for (group of pricing; track group.title; let index = $index) {
+      @for (group of pricing; track group.title) {
         <article class="price-group">
           <header>
-            <span>0{{ index + 1 }}</span>
             <h3>{{ group.title }}</h3>
           </header>
           <ul>
             @for (item of group.items; track item.name) {
               <li>
-                <span class="price-name">{{ item.name }} @if (item.note) { <small>{{ item.note }}</small> }</span>
+                <span class="price-name"
+                  >{{ item.name }}
+                  @if (item.note) {
+                    <small>{{ item.note }}</small>
+                  }
+                </span>
                 <strong>{{ item.price }}</strong>
               </li>
             }
@@ -131,16 +146,23 @@
         </article>
       }
     </div>
-    <p class="pricing-note">Holiday programming includes Valentine’s Day, St. Patrick’s Day, Independence Day, Halloween, Christmas, and more.</p>
+    <p class="pricing-note">
+      Holiday programming includes Valentine’s Day, St. Patrick’s Day, Independence Day, Halloween,
+      Christmas, and more.
+    </p>
   </section>
 
   <section class="contact" id="contact">
     <div class="contact-star" aria-hidden="true">✦</div>
     <p class="section-label">Let’s make something memorable</p>
     <h2>Have a date in mind?<br /><em>Let’s talk.</em></h2>
-    <p>Tell us what you’re celebrating and what you want it to feel like. We’ll help with the rest.</p>
+    <p>
+      Tell us what you’re celebrating and what you want it to feel like. We’ll help with the rest.
+    </p>
     <div class="contact-actions">
-      <a class="button button-light" href="mailto:LakelandCabaret@gmail.com?subject=Event%20inquiry">LakelandCabaret&#64;gmail.com <span>↗</span></a>
+      <a class="button button-light" href="mailto:LakelandCabaret@gmail.com?subject=Event%20inquiry"
+        >LakelandCabaret&#64;gmail.com <span>↗</span></a
+      >
       <a class="phone-link" href="tel:+15173668859">517 366 8859</a>
     </div>
   </section>
@@ -149,7 +171,7 @@
 <footer>
   <a class="brand footer-brand" href="#top">
     <img src="/images/logo.png" alt="" width="60" height="60" />
-    <span>Lakeland <i>Cabaret</i></span>
+    <span>Lakeland Cabaret</span>
   </a>
   <p>Music · Fire · Photo · Video · Ceremonies</p>
   <p>© {{ currentYear }} Lakeland Cabaret</p>
