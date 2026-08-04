@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap');
 
 :root {
-  --ink: #14112c;
-  --cream: #f4f0e7;
-  --paper: #fffdf7;
-  --blue: #181273;
-  --cornflower: #8ba7ed;
-  --sun: #f3b625;
+  --ink: #0b2f4a; /* deep blue-gray for text */
+  --cream: #f7f6f2; /* subtle off-white */
+  --paper: #ffffff;
+  --blue: #0b3b6f; /* primary logo blue */
+  --cornflower: #5b8fd6; /* lighter blue accent */
+  --sun: #ffbf00; /* logo yellow/gold */
   --rose: #e88f9e;
-  --line: rgba(20, 17, 44, 0.18);
+  --line: rgba(11, 59, 111, 0.12);
 }
 
 * { box-sizing: border-box; }
