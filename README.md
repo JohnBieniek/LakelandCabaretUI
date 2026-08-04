@@ -4,7 +4,7 @@ A responsive Angular 22 website for Lakeland Cabaret, a Mid-Michigan entertainme
 
 ## Development
 
-Angular 22.1 requires Node.js 22.22.3+, 24.15.0+, or 26+. After installing dependencies, run:
+The project pins Node.js 22.22.3 through `.node-version` and `.nvmrc`, which satisfies Angular 22.1 and is automatically detected by common deployment platforms and version managers. After installing dependencies, run:
 
 ```bash
 npm start
