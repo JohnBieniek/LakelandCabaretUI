@@ -203,26 +203,8 @@ h2 em {
   letter-spacing: 0.18em;
   writing-mode: vertical-rl;
 }
-.manifesto {
-  display: grid;
-  grid-template-columns: 26% 74%;
-  padding: clamp(3.5rem, 6vw, 6rem) clamp(1.5rem, 6vw, 7.5rem);
-  background: var(--paper);
-}
 .section-label {
   color: #746e78;
-}
-.manifesto-copy {
-  max-width: 1100px;
-  margin: 0;
-  font-size: clamp(2.4rem, 5vw, 6rem);
-  line-height: 1.04;
-  letter-spacing: -0.055em;
-}
-.manifesto-copy em {
-  color: var(--blue);
-  font-family: 'Italiana', serif;
-  font-weight: 400;
 }
 
 .services {
@@ -634,14 +616,6 @@ footer p:last-child {
   }
   .vertical-note {
     display: none;
-  }
-  .manifesto {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    padding: 3.5rem 1.25rem;
-  }
-  .manifesto-copy {
-    font-size: clamp(2.5rem, 11vw, 4rem);
   }
   .services,
   .pricing {
