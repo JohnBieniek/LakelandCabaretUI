@@ -345,6 +345,10 @@ h2 {
   justify-content: center;
   padding: clamp(3rem, 5vw, 5.5rem);
 }
+.about-copy .section-label {
+  color: #061c2d;
+  font-weight: 700;
+}
 .about-copy h2 {
   margin-bottom: 1.5rem;
 }
