@@ -315,7 +315,8 @@ h2 {
 .about {
   display: grid;
   grid-template-columns: 48% 52%;
-  background: var(--cornflower);
+  color: var(--paper);
+  background: var(--blue);
 }
 .about-image {
   position: relative;
@@ -347,11 +348,14 @@ h2 {
   padding: clamp(3rem, 5vw, 5.5rem);
 }
 .about-copy .section-label {
-  color: #061c2d;
+  color: #d4d7ff;
   font-weight: 700;
 }
 .about-copy h2 {
   margin-bottom: 1.5rem;
+}
+.about-copy h2 em {
+  color: var(--sun);
 }
 .about-copy .lead {
   margin-bottom: 1.5rem;
@@ -359,13 +363,13 @@ h2 {
   line-height: 1.6;
 }
 .about-copy > p:not(.section-label):not(.lead) {
-  color: #312d4d;
+  color: #d9dff3;
   line-height: 1.75;
 }
 .text-link.dark {
   align-self: flex-start;
   margin-top: 1.5rem;
-  color: var(--ink);
+  color: var(--paper);
 }
 
 .pricing {
