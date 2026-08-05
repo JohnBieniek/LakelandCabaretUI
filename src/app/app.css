@@ -386,7 +386,7 @@ h2 {
   grid-template-columns: 1fr 1.25fr 1fr;
   gap: 2.5rem;
   align-items: start;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 .pricing-intro h2 em {
   color: var(--blue);
@@ -724,7 +724,7 @@ footer p:last-child {
   .pricing-intro {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   .price-group {
     grid-template-columns: 1fr;
