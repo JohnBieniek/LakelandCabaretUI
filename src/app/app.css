@@ -385,11 +385,8 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1.25fr 1fr;
   gap: 2.5rem;
-  align-items: end;
+  align-items: start;
   margin-bottom: 3rem;
-}
-.pricing-intro .section-label {
-  align-self: start;
 }
 .pricing-intro h2 em {
   color: var(--blue);
