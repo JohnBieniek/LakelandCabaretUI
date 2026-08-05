@@ -454,7 +454,7 @@ h2 {
 .contact {
   position: relative;
   overflow: hidden;
-  padding: clamp(2rem, 3vw, 3rem) 1.5rem 4rem;
+  padding: clamp(1.25rem, 2vw, 2rem) 1.5rem 2.5rem;
   color: white;
   background: var(--blue);
   text-align: center;
@@ -477,24 +477,25 @@ h2 {
   bottom: -10vw;
 }
 .contact .section-label {
+  margin-bottom: 0.5rem;
   color: #b8b9d6;
 }
 .contact h2 {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 .contact h2 em {
   color: var(--sun);
 }
 .contact > p:not(.section-label) {
   max-width: none;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.75rem;
   color: #cecfe6;
   white-space: nowrap;
   line-height: 1.7;
 }
 .contact-star {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   color: var(--sun);
   font-size: 2rem;
 }
@@ -716,13 +717,14 @@ footer p:last-child {
     margin-left: 0;
   }
   .contact {
-    padding-top: 2rem;
+    padding-top: 1.25rem;
   }
   .contact > p:not(.section-label) {
     white-space: normal;
   }
   .contact-actions {
     flex-direction: column;
+    gap: 1.25rem;
   }
   .button-light {
     min-width: 0;
