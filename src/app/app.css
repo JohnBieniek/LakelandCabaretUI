@@ -136,7 +136,7 @@ h2 em {
   font-weight: 400;
 }
 .hero-intro {
-  width: min(550px, 90%);
+  width: min(650px, 100%);
   margin-bottom: 1.6rem;
   color: #d9daf2;
   font-size: clamp(1rem, 1.2vw, 1.2rem);
@@ -634,6 +634,9 @@ footer p:last-child {
   .hero-intro {
     width: 100%;
     font-size: 0.98rem;
+  }
+  .hero-intro br {
+    display: none;
   }
   .hero-actions {
     align-items: flex-start;
