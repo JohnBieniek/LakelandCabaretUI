@@ -569,7 +569,7 @@ footer p:last-child {
 
 @media (max-width: 1920px) {
   .section-heading h2 {
-    font-size: clamp(4rem, 5.8vw, 7.25rem);
+    font-size: clamp(3.8rem, 5.5vw, 6.9rem);
   }
 }
 
