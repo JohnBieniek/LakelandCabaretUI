@@ -407,7 +407,8 @@ h2 {
 }
 .price-group header {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .price-group h3 {
   margin: 0;
@@ -415,6 +416,13 @@ h2 {
   font-size: clamp(1.8rem, 3vw, 3rem);
   font-weight: 400;
   text-transform: capitalize;
+}
+.price-group-description {
+  max-width: 360px;
+  margin: 1rem 2rem 0 0;
+  color: #625d67;
+  font-size: 0.9rem;
+  line-height: 1.65;
 }
 .price-group ul {
   margin: 0;

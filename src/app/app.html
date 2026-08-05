@@ -118,6 +118,9 @@
         <article class="price-group">
           <header>
             <h3>{{ group.title }}</h3>
+            @if (group.description) {
+              <p class="price-group-description">{{ group.description }}</p>
+            }
           </header>
           <ul>
             @for (item of group.items; track item.name) {
