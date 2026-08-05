@@ -87,6 +87,7 @@ nav a {
 .hero-copy {
   position: relative;
   z-index: 2;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -144,8 +145,9 @@ h2 em {
 }
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
+  gap: 1.25rem clamp(1rem, 2vw, 2rem);
 }
 .button {
   display: inline-flex;
@@ -169,6 +171,7 @@ h2 em {
   border-bottom: 1px solid currentColor;
   font-size: 0.78rem;
   font-weight: 600;
+  white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08em;
