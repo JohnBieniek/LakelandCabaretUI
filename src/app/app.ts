@@ -1,9 +1,10 @@
+import { isPlatformBrowser } from '@angular/common';
 import {
-  afterNextRender,
   ChangeDetectionStrategy,
   Component,
   DestroyRef,
   inject,
+  PLATFORM_ID,
   signal,
 } from '@angular/core';
 
@@ -30,6 +31,7 @@ interface PriceGroup {
 })
 export class App {
   private readonly destroyRef = inject(DestroyRef);
+  private readonly platformId = inject(PLATFORM_ID);
   protected readonly menuOpen = signal(false);
   protected readonly currentYear = new Date().getFullYear();
   protected readonly currentDjPhotoIndex = signal(0);
@@ -167,12 +169,31 @@ export class App {
   ];
 
   constructor() {
-    afterNextRender(() => {
-      const timer = window.setInterval(() => {
-        this.currentDjPhotoIndex.update((index) => (index + 1) % this.djPhotos.length);
-      }, 4000);
+    if (!isPlatformBrowser(this.platformId)) return;
 
-      this.destroyRef.onDestroy(() => window.clearInterval(timer));
+    let timer: number | undefined;
+    let destroyed = false;
+
+    const showNextPhoto = () => {
+      const nextIndex = (this.currentDjPhotoIndex() + 1) % this.djPhotos.length;
+      const nextImage = new Image();
+
+      nextImage.onload = () => {
+        if (destroyed) return;
+        this.currentDjPhotoIndex.set(nextIndex);
+        timer = window.setTimeout(showNextPhoto, 4000);
+      };
+      nextImage.onerror = () => {
+        if (destroyed) return;
+        timer = window.setTimeout(showNextPhoto, 4000);
+      };
+      nextImage.src = this.djPhotos[nextIndex].src;
+    };
+
+    timer = window.setTimeout(showNextPhoto, 4000);
+    this.destroyRef.onDestroy(() => {
+      destroyed = true;
+      if (timer !== undefined) window.clearTimeout(timer);
     });
   }
 
