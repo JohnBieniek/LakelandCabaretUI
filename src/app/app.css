@@ -319,6 +319,9 @@ h2 {
 .service-card:hover .dj-slideshow img:nth-child(9) {
   transform: scale(1.49);
 }
+.dj-slideshow img:nth-child(10) {
+  object-position: 30% 50%;
+}
 .service-copy {
   display: flex;
   flex-direction: column;
