@@ -91,6 +91,9 @@ export class App {
     },
     {
       title: 'Photo & video',
+      description: [
+        'Our photographers and videographers bring the professionalism and skill needed to make your event shine for years to come. Our well-shot, high-resolution imagery ensures you have plenty of memories to share from your special occasion. Need extra coverage? Add a second photographer or videographer at half price.',
+      ],
       items: [
         { name: 'Student or graduation session', price: '$350', note: '1 hour' },
         { name: 'Family session', price: '$350–$600', note: '1–2 hours' },
