@@ -486,9 +486,10 @@ h2 {
   color: var(--sun);
 }
 .contact > p:not(.section-label) {
-  max-width: 610px;
+  max-width: none;
   margin: 0 auto 2.5rem;
   color: #cecfe6;
+  white-space: nowrap;
   line-height: 1.7;
 }
 .contact-star {
@@ -712,6 +713,9 @@ footer p:last-child {
   }
   .contact {
     padding-top: 2rem;
+  }
+  .contact > p:not(.section-label) {
+    white-space: normal;
   }
   .contact-actions {
     flex-direction: column;
