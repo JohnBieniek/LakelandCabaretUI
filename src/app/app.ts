@@ -32,7 +32,7 @@ export class App {
       alt: 'Lakeland Cabaret DJ at a Christmas event',
     },
     {
-      src: '/images/mall christmas close.jpg',
+      src: '/images/mall christmas far.jpg',
       alt: 'Lakeland Cabaret DJ performing at a mall Christmas event',
     },
     { src: '/images/photography.webp', alt: 'Lakeland Cabaret DJ performing at a holiday event' },

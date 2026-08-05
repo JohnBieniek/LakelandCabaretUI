@@ -306,6 +306,19 @@ h2 {
   transform: scale(1.035);
   filter: saturate(1);
 }
+.dj-slideshow img:nth-child(5) {
+  object-position: 68% 35%;
+}
+.dj-slideshow img:nth-child(8) {
+  object-position: 40% 45%;
+}
+.dj-slideshow img:nth-child(9) {
+  object-position: 62% 45%;
+  transform: scale(1.45);
+}
+.service-card:hover .dj-slideshow img:nth-child(9) {
+  transform: scale(1.49);
+}
 .service-copy {
   display: flex;
   flex-direction: column;
@@ -715,6 +728,9 @@ footer p:last-child {
   .hero-visual {
     height: 340px;
     padding: 0 1.25rem 1.25rem;
+  }
+  .dj-slideshow img:nth-child(4) {
+    object-position: 50% 30%;
   }
   .photo-frame {
     border-radius: 48% 48% 2px 2px / 28% 28% 2px 2px;
