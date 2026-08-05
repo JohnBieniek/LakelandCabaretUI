@@ -67,17 +67,18 @@ export class App {
     {
       title: 'Live Cabaret',
       items: [
-        { name: 'Event performance', price: '$300', note: '30 minutes' },
-        { name: 'Weddings', price: '$500', note: '30 minutes' },
+        { name: 'Event fire performance', price: '$300', note: '30 minutes' },
+        { name: 'Wedding fire performance', price: '$500', note: '30 minutes' },
+        { name: 'Event flow performance', price: '$300', note: '2 hours' },
       ],
     },
     {
       title: 'Music',
       items: [
-        { name: 'Wedding package', price: '$2,000', note: 'up to 6 hours' },
-        { name: 'Award shows', price: '$400', note: 'up to 4 hours' },
-        { name: 'Parties & festivals', price: '$400', note: 'up to 4 hours' },
         { name: 'Holiday events', price: '$200', note: 'up to 4 hours' },
+        { name: 'Parties & festivals', price: '$400', note: 'up to 4 hours' },
+        { name: 'Award shows', price: '$400', note: 'up to 4 hours' },
+        { name: 'Wedding package', price: '$2,000', note: 'up to 6 hours' },
       ],
     },
     {
@@ -95,7 +96,7 @@ export class App {
       items: [
         { name: 'Consultation', price: '$100' },
         { name: 'Ceremony officiation', price: '$200' },
-        { name: 'Ceremony package', price: '$500' },
+        { name: 'Ceremony package', price: '$250' },
       ],
     },
   ];
