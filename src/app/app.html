@@ -67,11 +67,17 @@
         <article class="service-card">
           <div class="service-image">
             @if (service.title === 'Music & DJ') {
-              <img
-                [src]="djPhotos[currentDjPhotoIndex()].src"
-                [alt]="djPhotos[currentDjPhotoIndex()].alt"
-                loading="lazy"
-              />
+              <div class="dj-slideshow">
+                @for (photo of djPhotos; track photo.src; let index = $index) {
+                  <img
+                    [src]="photo.src"
+                    [alt]="index === 0 ? photo.alt : ''"
+                    [style.--slide-index]="index"
+                    [attr.aria-hidden]="index === 0 ? null : 'true'"
+                    loading="eager"
+                  />
+                }
+              </div>
             } @else {
               <img [src]="service.image" [alt]="service.imageAlt" loading="lazy" />
             }

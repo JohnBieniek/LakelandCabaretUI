@@ -273,6 +273,35 @@ h2 {
     transform 0.7s ease,
     filter 0.7s ease;
 }
+.dj-slideshow {
+  position: absolute;
+  inset: 0;
+}
+.dj-slideshow img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: dj-photo-cycle 40s infinite;
+  animation-delay: calc(var(--slide-index) * 4s);
+}
+@keyframes dj-photo-cycle {
+  0%,
+  9% {
+    opacity: 1;
+  }
+  10%,
+  100% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dj-slideshow img {
+    animation: none !important;
+  }
+  .dj-slideshow img:first-child {
+    opacity: 1;
+  }
+}
 .service-card:hover .service-image img {
   transform: scale(1.035);
   filter: saturate(1);

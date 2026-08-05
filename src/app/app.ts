@@ -1,12 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  DestroyRef,
-  inject,
-  PLATFORM_ID,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 interface Service {
   title: string;
@@ -30,11 +22,8 @@ interface PriceGroup {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
-  private readonly destroyRef = inject(DestroyRef);
-  private readonly platformId = inject(PLATFORM_ID);
   protected readonly menuOpen = signal(false);
   protected readonly currentYear = new Date().getFullYear();
-  protected readonly currentDjPhotoIndex = signal(0);
 
   protected readonly djPhotos = [
     { src: '/images/k wedding dj.jpg', alt: 'Lakeland Cabaret DJ performing at a wedding' },
@@ -167,35 +156,6 @@ export class App {
       ],
     },
   ];
-
-  constructor() {
-    if (!isPlatformBrowser(this.platformId)) return;
-
-    let timer: number | undefined;
-    let destroyed = false;
-
-    const showNextPhoto = () => {
-      const nextIndex = (this.currentDjPhotoIndex() + 1) % this.djPhotos.length;
-      const nextImage = new Image();
-
-      nextImage.onload = () => {
-        if (destroyed) return;
-        this.currentDjPhotoIndex.set(nextIndex);
-        timer = window.setTimeout(showNextPhoto, 4000);
-      };
-      nextImage.onerror = () => {
-        if (destroyed) return;
-        timer = window.setTimeout(showNextPhoto, 4000);
-      };
-      nextImage.src = this.djPhotos[nextIndex].src;
-    };
-
-    timer = window.setTimeout(showNextPhoto, 4000);
-    this.destroyRef.onDestroy(() => {
-      destroyed = true;
-      if (timer !== undefined) window.clearTimeout(timer);
-    });
-  }
 
   protected closeMenu(): void {
     this.menuOpen.set(false);
