@@ -421,7 +421,7 @@ h2 {
   text-transform: capitalize;
 }
 .price-group-description {
-  max-width: 500px;
+  width: min(750px, calc(100% - 2rem));
   margin: 1rem 2rem 0 0;
   color: #625d67;
   font-size: 0.9rem;
@@ -731,6 +731,10 @@ footer p:last-child {
   .price-group {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .price-group-description {
+    width: 100%;
+    margin-right: 0;
   }
   .price-group li {
     align-items: flex-start;
