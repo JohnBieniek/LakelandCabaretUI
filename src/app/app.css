@@ -692,8 +692,9 @@ footer p:last-child {
     gap: 2rem;
   }
   .section-heading h2 {
-    font-size: clamp(3rem, 13vw, 4.5rem);
+    font-size: clamp(1.6rem, 8vw, 2.6rem);
     line-height: 0.95;
+    white-space: nowrap;
   }
   .section-heading > p {
     font-size: 1rem;
