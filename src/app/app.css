@@ -283,8 +283,8 @@ h2 {
   inset: 0;
   z-index: 0;
   transform: translateX(100%);
-  animation: dj-photo-cycle 40s infinite;
-  animation-delay: calc(var(--slide-index) * 4s);
+  animation: dj-photo-cycle 80s infinite;
+  animation-delay: calc(var(--slide-index) * 8s);
   will-change: transform;
 }
 @keyframes dj-photo-cycle {
@@ -292,17 +292,17 @@ h2 {
     z-index: 2;
     transform: translateX(100%);
   }
-  1.5%,
+  0.75%,
   10% {
     z-index: 2;
     transform: translateX(0);
   }
   10.01%,
-  11.5% {
+  10.75% {
     z-index: 1;
     transform: translateX(0);
   }
-  11.51%,
+  10.76%,
   100% {
     z-index: 0;
     transform: translateX(100%);
