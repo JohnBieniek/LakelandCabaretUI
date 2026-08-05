@@ -391,6 +391,9 @@ h2 {
 .pricing-intro h2 em {
   color: var(--blue);
 }
+.pricing-intro h2 {
+  text-align: center;
+}
 .pricing-intro > p:last-child {
   margin-bottom: 0;
   color: #625d67;
