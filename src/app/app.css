@@ -444,11 +444,12 @@ h2 {
   font-weight: 600;
 }
 .pricing-note {
-  max-width: 720px;
-  margin: 2rem 0 0 35%;
+  margin: 2rem 0 0;
   color: #726d76;
   font-size: 0.8rem;
   line-height: 1.6;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .contact {
@@ -715,6 +716,8 @@ footer p:last-child {
   }
   .pricing-note {
     margin-left: 0;
+    text-align: left;
+    white-space: normal;
   }
   .contact {
     padding-top: 1.25rem;
