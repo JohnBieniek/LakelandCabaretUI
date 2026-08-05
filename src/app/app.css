@@ -575,10 +575,10 @@ footer p:last-child {
 
 @media (min-width: 1440px) {
   .hero {
-    grid-template-columns: 57% 43%;
+    grid-template-columns: 55% 45%;
   }
   .hero-visual {
-    padding: 155px 2vw 45px 0;
+    padding: 155px 1vw 45px 0;
   }
   .photo-frame {
     border-radius: 50% 50% 2px 2px / 24% 24% 2px 2px;
