@@ -276,22 +276,36 @@ h2 {
 .dj-slideshow {
   position: absolute;
   inset: 0;
+  background: url('/images/k wedding dj.jpg') center / cover no-repeat;
 }
 .dj-slideshow img {
   position: absolute;
   inset: 0;
-  opacity: 0;
+  z-index: 0;
+  transform: translateX(100%);
   animation: dj-photo-cycle 40s infinite;
   animation-delay: calc(var(--slide-index) * 4s);
+  will-change: transform;
 }
 @keyframes dj-photo-cycle {
-  0%,
-  9% {
-    opacity: 1;
+  0% {
+    z-index: 2;
+    transform: translateX(100%);
   }
-  10%,
+  1.5%,
+  10% {
+    z-index: 2;
+    transform: translateX(0);
+  }
+  10.01%,
+  11.5% {
+    z-index: 1;
+    transform: translateX(0);
+  }
+  11.51%,
   100% {
-    opacity: 0;
+    z-index: 0;
+    transform: translateX(100%);
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -299,7 +313,7 @@ h2 {
     animation: none !important;
   }
   .dj-slideshow img:first-child {
-    opacity: 1;
+    transform: translateX(0);
   }
 }
 .service-card:hover .service-image img {
@@ -314,10 +328,10 @@ h2 {
 }
 .dj-slideshow img:nth-child(9) {
   object-position: 62% 45%;
-  transform: scale(1.45);
+  scale: 1.45;
 }
 .service-card:hover .dj-slideshow img:nth-child(9) {
-  transform: scale(1.49);
+  scale: 1.49;
 }
 .dj-slideshow img:nth-child(10) {
   object-position: 30% 50%;
