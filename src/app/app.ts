@@ -74,7 +74,7 @@ export class App {
         {
           name: 'Event fire performance',
           price: '$300',
-          note: '1 performer + fire safety · 30-minute minimum',
+          note: '1+ performers + fire safety · 30-minute minimum',
         },
         {
           name: 'Event flow performance',
