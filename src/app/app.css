@@ -540,7 +540,8 @@ footer {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 2rem;
-  padding: 1rem clamp(1.5rem, 4vw, 4rem);
+  min-height: 96px;
+  padding: 0.25rem clamp(1.5rem, 4vw, 4rem);
   background: var(--cream);
 }
 .footer-brand {
@@ -548,7 +549,8 @@ footer {
   font-size: clamp(1.15rem, 1.5vw, 1.4rem);
 }
 .footer-brand img {
-  height: 72px;
+  height: 87.4px;
+  max-height: 96%;
   width: auto;
   object-fit: contain;
 }
