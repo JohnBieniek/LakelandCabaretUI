@@ -330,7 +330,7 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: 40% 30%;
   filter: saturate(0.72);
 }
 .image-caption {
