@@ -11,7 +11,7 @@ interface Service {
 
 interface PriceGroup {
   title: string;
-  description?: string;
+  description?: string[];
   items: { name: string; price: string; note?: string }[];
 }
 
@@ -67,8 +67,9 @@ export class App {
   protected readonly pricing: PriceGroup[] = [
     {
       title: 'Live Cabaret',
-      description:
+      description: [
         'We specialize in fire performance, encompassing a wide variety of flaming objects twirled, tossed, and manipulated to music. We perform with more than a dozen unique fire props and have trained with many of the world’s best performers. The listed fire-performance times are the minimum duration we will burn. A typical performance lasts about an hour, including time to refuel between props and a brief five-minute intermission.',
+      ],
       items: [
         { name: 'Event fire performance', price: '$300', note: '30 minutes' },
         { name: 'Event flow performance', price: '$300', note: '2 hours' },
@@ -77,6 +78,10 @@ export class App {
     },
     {
       title: 'Music',
+      description: [
+        'Our DJs are ready to energize your event. Parties, holiday events, grand openings, weddings, and special occasions of every kind are better with music. We carefully curate the music and atmosphere for your occasion and are happy to collaborate on set-list details, including requested tracks and a blacklist of songs or artists you do not want to hear.',
+        'Every wedding includes music for the prelude, ceremony, dinner, and dancing. Dance sets are mixed live, and we take requests according to the host’s preferences.',
+      ],
       items: [
         { name: 'Holiday events', price: '$200', note: 'up to 4 hours' },
         { name: 'Parties & festivals', price: '$400', note: 'up to 4 hours' },

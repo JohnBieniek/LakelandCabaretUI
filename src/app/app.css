@@ -424,6 +424,12 @@ h2 {
   font-size: 0.9rem;
   line-height: 1.65;
 }
+.price-group-description p {
+  margin-bottom: 0.8rem;
+}
+.price-group-description p:last-child {
+  margin-bottom: 0;
+}
 .price-group ul {
   margin: 0;
   padding: 0;
