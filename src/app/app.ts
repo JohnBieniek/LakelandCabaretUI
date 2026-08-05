@@ -68,8 +68,8 @@ export class App {
       title: 'Live Cabaret',
       items: [
         { name: 'Event fire performance', price: '$300', note: '30 minutes' },
-        { name: 'Wedding fire performance', price: '$500', note: '30 minutes' },
         { name: 'Event flow performance', price: '$300', note: '2 hours' },
+        { name: 'Wedding fire performance', price: '$500', note: '30 minutes' },
       ],
     },
     {
