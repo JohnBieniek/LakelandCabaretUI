@@ -218,7 +218,7 @@ h2 em {
 }
 .section-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.8fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(340px, 0.9fr);
   gap: clamp(3rem, 6vw, 7rem);
   align-items: end;
   margin-bottom: clamp(2rem, 3vw, 3rem);
@@ -240,7 +240,7 @@ h2 {
 }
 .section-heading > p {
   align-self: center;
-  max-width: 500px;
+  max-width: 560px;
   margin-bottom: 0.25rem;
   color: #5f5a66;
   font-size: clamp(1.35rem, 1.75vw, 1.7rem);
