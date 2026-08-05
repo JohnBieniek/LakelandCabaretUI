@@ -78,9 +78,9 @@ export class App {
       title: 'Photo & video',
       items: [
         { name: 'Student or graduation session', price: '$350', note: '1 hour' },
-        { name: 'Family session', price: '$350–$700', note: '1–2 hours' },
-        { name: 'Parade or sports coverage', price: '$700', note: '2 hours' },
-        { name: 'Event coverage', price: '$1,500', note: 'up to 4 hours' },
+        { name: 'Family session', price: '$350–$600', note: '1–2 hours' },
+        { name: 'Parade or sports coverage', price: '$600', note: '2 hours' },
+        { name: 'Event coverage', price: '$1,200', note: 'up to 4 hours' },
         { name: 'Full wedding coverage', price: '$1,500', note: 'up to 6 hours' },
       ],
     },
