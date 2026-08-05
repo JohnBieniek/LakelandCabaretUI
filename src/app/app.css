@@ -548,6 +548,12 @@ footer p:last-child {
   justify-self: end;
 }
 
+@media (max-width: 1920px) {
+  .section-heading h2 {
+    font-size: clamp(4rem, 5.8vw, 7.25rem);
+  }
+}
+
 @media (max-width: 1050px) {
   .hero {
     grid-template-columns: 60% 40%;
