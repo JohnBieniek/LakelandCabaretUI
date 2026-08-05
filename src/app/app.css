@@ -239,7 +239,7 @@ h2 {
   color: var(--blue);
 }
 .section-heading > p {
-  align-self: start;
+  align-self: center;
   max-width: 600px;
   margin-bottom: 0.25rem;
   color: #5f5a66;
