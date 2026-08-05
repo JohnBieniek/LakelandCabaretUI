@@ -104,6 +104,9 @@ export class App {
     },
     {
       title: 'Wedding officiant',
+      description: [
+        'Our ordained officiants provide the professional, soulful touch that brings your ceremony together. We’re glad to collaborate on your wedding plans, vows, and more. Whether you need help finding the right words, someone to solemnize the marriage and pronounce you married, or something in between, we’d be honored to bring our experience to your occasion.',
+      ],
       items: [
         { name: 'Consultation', price: '$100' },
         { name: 'Ceremony officiation', price: '$200' },
