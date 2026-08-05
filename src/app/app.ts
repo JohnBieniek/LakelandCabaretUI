@@ -65,10 +65,16 @@ export class App {
 
   protected readonly pricing: PriceGroup[] = [
     {
-      title: 'Music & events',
+      title: 'Music',
       items: [
         { name: 'Event performance', price: '$300', note: '30 minutes' },
         { name: 'Weddings', price: '$500', note: '30 minutes' },
+        { name: 'Wedding package', price: '$2,000', note: 'up to 6 hours' },
+      ],
+    },
+    {
+      title: 'Events',
+      items: [
         { name: 'Award shows', price: '$400', note: 'up to 4 hours' },
         { name: 'Parties & festivals', price: '$400', note: 'up to 4 hours' },
         { name: 'Holiday events', price: '$200', note: 'up to 4 hours' },
@@ -90,7 +96,6 @@ export class App {
         { name: 'Consultation', price: '$100' },
         { name: 'Ceremony officiation', price: '$200' },
         { name: 'Ceremony package', price: '$500' },
-        { name: 'Wedding package', price: '$2,000', note: 'up to 6 hours' },
       ],
     },
   ];
