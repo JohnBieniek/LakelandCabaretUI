@@ -95,9 +95,9 @@ export class App {
         'Every wedding includes music for the prelude, ceremony, dinner, and dancing. Dance sets are mixed live, and we take requests according to the host’s preferences.',
       ],
       items: [
-        { name: 'Holiday events', price: '$200', note: 'up to 4 hours' },
-        { name: 'Parties & festivals', price: '$400', note: 'up to 4 hours' },
-        { name: 'Award shows', price: '$400', note: 'up to 4 hours' },
+        { name: 'Holiday events', price: '$150–$300', note: '3–6 hours' },
+        { name: 'Parties & festivals', price: '$300–$600', note: '3–6 hours' },
+        { name: 'Award shows', price: '$300–$600', note: '3–6 hours' },
         { name: 'Wedding package', price: '$2,000', note: 'up to 6 hours' },
       ],
     },
