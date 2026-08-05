@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import {
+  afterNextRender,
+  ChangeDetectionStrategy,
+  Component,
+  DestroyRef,
+  inject,
+  signal,
+} from '@angular/core';
 
 interface Service {
   title: string;
@@ -22,8 +29,32 @@ interface PriceGroup {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
+  private readonly destroyRef = inject(DestroyRef);
   protected readonly menuOpen = signal(false);
   protected readonly currentYear = new Date().getFullYear();
+  protected readonly currentDjPhotoIndex = signal(0);
+
+  protected readonly djPhotos = [
+    { src: '/images/k wedding dj.jpg', alt: 'Lakeland Cabaret DJ performing at a wedding' },
+    {
+      src: '/images/close christmas backdrop.png',
+      alt: 'Lakeland Cabaret DJ at a Christmas event',
+    },
+    {
+      src: '/images/mall christmas close.jpg',
+      alt: 'Lakeland Cabaret DJ performing at a mall Christmas event',
+    },
+    { src: '/images/photography.webp', alt: 'Lakeland Cabaret DJ performing at a holiday event' },
+    { src: '/images/whoville dj.jpg', alt: 'Lakeland Cabaret DJ performing at a Whoville event' },
+    { src: '/images/dance floor dj.jpg', alt: 'Lakeland Cabaret DJ beside a dance floor' },
+    { src: '/images/dj pov.jpg', alt: 'A DJ booth view of a Lakeland Cabaret event' },
+    { src: '/images/suit dj.jpg', alt: 'Lakeland Cabaret DJ performing in a suit' },
+    { src: '/images/mcordy dj.jpg', alt: 'Lakeland Cabaret DJ performing at an event' },
+    {
+      src: '/images/bouncy house dj close.jpg',
+      alt: 'Lakeland Cabaret DJ performing near a bouncy house',
+    },
+  ];
 
   protected readonly services: Service[] = [
     {
@@ -134,6 +165,16 @@ export class App {
       ],
     },
   ];
+
+  constructor() {
+    afterNextRender(() => {
+      const timer = window.setInterval(() => {
+        this.currentDjPhotoIndex.update((index) => (index + 1) % this.djPhotos.length);
+      }, 4000);
+
+      this.destroyRef.onDestroy(() => window.clearInterval(timer));
+    });
+  }
 
   protected closeMenu(): void {
     this.menuOpen.set(false);
