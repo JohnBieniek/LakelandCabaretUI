@@ -32,18 +32,24 @@ export class App {
       alt: 'Lakeland Cabaret DJ at a Christmas event',
     },
     {
+      src: '/images/mcordy dj.jpg',
+      alt: 'Lakeland Cabaret DJ performing at an event',
+    },
+    {
+      src: '/images/suit dj.jpg',
+      alt: 'Lakeland Cabaret DJ performing in a suit',
+    },
+    {
       src: '/images/mall christmas far.jpg',
       alt: 'Lakeland Cabaret DJ performing at a mall Christmas event',
     },
     { src: '/images/photography.webp', alt: 'Lakeland Cabaret DJ performing at a holiday event' },
+    { src: '/images/dance floor dj.jpg', alt: 'Lakeland Cabaret DJ beside a dance floor' },
     {
       src: '/images/whoville tight.png',
       alt: 'Lakeland Cabaret DJ performing at a Whoville event',
     },
-    { src: '/images/dance floor dj.jpg', alt: 'Lakeland Cabaret DJ beside a dance floor' },
     { src: '/images/dj pov.jpg', alt: 'A DJ booth view of a Lakeland Cabaret event' },
-    { src: '/images/suit dj.jpg', alt: 'Lakeland Cabaret DJ performing in a suit' },
-    { src: '/images/mcordy dj.jpg', alt: 'Lakeland Cabaret DJ performing at an event' },
     {
       src: '/images/bouncy house dj close.jpg',
       alt: 'Lakeland Cabaret DJ performing near a bouncy house',
