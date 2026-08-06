@@ -684,6 +684,13 @@ footer p:last-child {
   }
 }
 
+@media (min-width: 1051px) {
+  .service-card {
+    min-height: 0;
+    aspect-ratio: 1.4269 / 1;
+  }
+}
+
 @media (max-width: 1050px) {
   .hero {
     grid-template-columns: 60% 40%;
