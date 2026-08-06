@@ -261,7 +261,6 @@ h2 {
 }
 .service-image {
   position: relative;
-  height: 340px;
   min-height: 340px;
   overflow: hidden;
 }
@@ -695,7 +694,6 @@ footer p:last-child {
     grid-template-columns: 1fr;
   }
   .service-image {
-    height: 300px;
     min-height: 300px;
   }
   .about-copy {
@@ -828,7 +826,6 @@ footer p:last-child {
     min-height: 0;
   }
   .service-image {
-    height: 310px;
     min-height: 310px;
   }
   .service-copy {
