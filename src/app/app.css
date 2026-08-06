@@ -486,7 +486,6 @@ h2 {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-height: 430px;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.14);
   font-family: Arial, sans-serif;
@@ -500,7 +499,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: clamp(3.5rem, 7vw, 8rem);
+  padding: clamp(1.5rem, 2.5vw, 2.5rem) clamp(3.5rem, 7vw, 8rem);
 }
 .facebook-copy .section-label {
   color: rgba(255, 255, 255, 0.72);
@@ -941,7 +940,7 @@ footer p:last-child {
     display: none;
   }
   .facebook-copy {
-    padding: 3.5rem 1.25rem;
+    padding: 2rem 1.25rem;
   }
   .facebook-copy h2 {
     font-size: clamp(1.65rem, 7.5vw, 3rem);
