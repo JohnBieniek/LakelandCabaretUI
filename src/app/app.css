@@ -510,7 +510,10 @@ h2 {
   white-space: nowrap;
 }
 .facebook-copy h2 em {
-  color: var(--sun);
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 .facebook-copy > p:not(.section-label) {
   max-width: none;
