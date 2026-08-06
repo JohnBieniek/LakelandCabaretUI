@@ -57,8 +57,8 @@ export class App {
   ];
 
   protected readonly firePhotos = [
-    { src: '/images/whip tight.png', alt: 'Lakeland Cabaret fire whip performance' },
-    { src: '/images/ryan ropedart.jpg', alt: 'Ryan performing with a fire rope dart' },
+    { src: '/images/whip fit.png', alt: 'Lakeland Cabaret fire whip performance' },
+    { src: '/images/ropedart tight.png', alt: 'Ryan performing with a fire rope dart' },
     { src: '/images/mcordy doubles wide.jpg', alt: 'McCordy performing with double fire props' },
     {
       src: '/images/kiss cover concert performance.jpg',
@@ -66,7 +66,7 @@ export class App {
     },
     { src: '/images/mcordy staff.jpg', alt: 'McCordy performing with a fire staff' },
     { src: '/images/yard wand.jpg', alt: 'Lakeland Cabaret fire wand performance' },
-    { src: '/images/mcordy eating.jpg', alt: 'McCordy performing a fire-eating act' },
+    { src: '/images/eating tight.png', alt: 'McCordy performing a fire-eating act' },
     { src: '/images/mccordy wand tight.png', alt: 'McCordy performing with a fire wand' },
   ];
 
