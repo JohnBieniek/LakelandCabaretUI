@@ -143,7 +143,7 @@ export class App {
         { name: 'Holiday events', price: '$150–$300', note: '3–6 hours' },
         { name: 'Parties & festivals', price: '$300–$600', note: '3–6 hours' },
         { name: 'Award shows', price: '$300–$600', note: '3–6 hours' },
-        { name: 'Wedding package', price: '$2,000', note: 'up to 6 hours' },
+        { name: 'Wedding package', price: '$1,500', note: 'up to 6 hours' },
       ],
     },
     {
