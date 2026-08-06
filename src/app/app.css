@@ -691,6 +691,16 @@ footer p:last-child {
   }
 }
 
+@media (min-width: 1051px) and (max-width: 1920px) {
+  .service-copy {
+    padding-inline: clamp(1rem, 1.5vw, 1.75rem);
+  }
+
+  .service-detail {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 1050px) {
   .hero {
     grid-template-columns: 60% 40%;
