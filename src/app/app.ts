@@ -47,6 +47,20 @@ export class App {
     },
   ];
 
+  protected readonly firePhotos = [
+    { src: '/images/mccordy whip.jpg', alt: 'Lakeland Cabaret fire whip performance' },
+    { src: '/images/ryan ropedart.jpg', alt: 'Ryan performing with a fire rope dart' },
+    { src: '/images/mcordy doubles wide.jpg', alt: 'McCordy performing with double fire props' },
+    {
+      src: '/images/kiss cover concert performance.jpg',
+      alt: 'Lakeland Cabaret performing fire at a concert',
+    },
+    { src: '/images/mcordy staff.jpg', alt: 'McCordy performing with a fire staff' },
+    { src: '/images/yard wand.jpg', alt: 'Lakeland Cabaret fire wand performance' },
+    { src: '/images/mcordy eating.jpg', alt: 'McCordy performing a fire-eating act' },
+    { src: '/images/mcordy wand.jpg', alt: 'McCordy performing with a fire wand' },
+  ];
+
   protected readonly services: Service[] = [
     {
       title: 'Music & DJ',

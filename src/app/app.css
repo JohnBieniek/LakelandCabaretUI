@@ -273,19 +273,30 @@ h2 {
     transform 0.7s ease,
     filter 0.7s ease;
 }
-.dj-slideshow {
+.service-slideshow {
   position: absolute;
   inset: 0;
+}
+.dj-slideshow {
   background: url('/images/k wedding dj.jpg') center / cover no-repeat;
 }
-.dj-slideshow img {
+.fire-slideshow {
+  background: url('/images/mccordy whip.jpg') center / cover no-repeat;
+}
+.service-slideshow img {
   position: absolute;
   inset: 0;
   z-index: 0;
   transform: translateX(100%);
+  will-change: transform;
+}
+.dj-slideshow img {
   animation: dj-photo-cycle 80s infinite;
   animation-delay: calc(var(--slide-index) * 8s);
-  will-change: transform;
+}
+.fire-slideshow img {
+  animation: fire-photo-cycle 64s infinite;
+  animation-delay: calc(var(--slide-index) * 8s);
 }
 @keyframes dj-photo-cycle {
   0% {
@@ -308,11 +319,32 @@ h2 {
     transform: translateX(100%);
   }
 }
+@keyframes fire-photo-cycle {
+  0% {
+    z-index: 2;
+    transform: translateX(100%);
+  }
+  0.9375%,
+  12.5% {
+    z-index: 2;
+    transform: translateX(0);
+  }
+  12.51%,
+  13.4375% {
+    z-index: 1;
+    transform: translateX(0);
+  }
+  13.4475%,
+  100% {
+    z-index: 0;
+    transform: translateX(100%);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
-  .dj-slideshow img {
+  .service-slideshow img {
     animation: none !important;
   }
-  .dj-slideshow img:first-child {
+  .service-slideshow img:first-child {
     transform: translateX(0);
   }
 }

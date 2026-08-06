@@ -67,8 +67,20 @@
         <article class="service-card">
           <div class="service-image">
             @if (service.title === 'Music & DJ') {
-              <div class="dj-slideshow">
+              <div class="service-slideshow dj-slideshow">
                 @for (photo of djPhotos; track photo.src; let index = $index) {
+                  <img
+                    [src]="photo.src"
+                    [alt]="index === 0 ? photo.alt : ''"
+                    [style.--slide-index]="index"
+                    [attr.aria-hidden]="index === 0 ? null : 'true'"
+                    loading="eager"
+                  />
+                }
+              </div>
+            } @else if (service.title === 'Fire Performance') {
+              <div class="service-slideshow fire-slideshow">
+                @for (photo of firePhotos; track photo.src; let index = $index) {
                   <img
                     [src]="photo.src"
                     [alt]="index === 0 ? photo.alt : ''"
