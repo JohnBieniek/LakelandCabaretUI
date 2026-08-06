@@ -376,6 +376,55 @@ h2 {
   color: var(--paper);
 }
 
+.facebook {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.65fr) minmax(0, 1.35fr);
+  align-items: stretch;
+  color: var(--paper);
+  background: #1877f2;
+}
+.facebook-mark {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 430px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.14);
+  font-family: Arial, sans-serif;
+  font-size: clamp(24rem, 38vw, 46rem);
+  font-weight: 700;
+  line-height: 0.72;
+  user-select: none;
+}
+.facebook-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(3.5rem, 7vw, 8rem);
+}
+.facebook-copy .section-label {
+  color: rgba(255, 255, 255, 0.72);
+}
+.facebook-copy h2 {
+  max-width: 850px;
+  margin-bottom: 1.5rem;
+}
+.facebook-copy h2 em {
+  color: var(--sun);
+}
+.facebook-copy > p:not(.section-label) {
+  max-width: 680px;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.facebook-button {
+  color: var(--ink);
+  background: var(--sun);
+}
+
 .pricing {
   padding: clamp(1.25rem, 2vw, 2.25rem) clamp(1.5rem, 6vw, 7.5rem)
     clamp(2.25rem, 4vw, 4.5rem);
@@ -532,6 +581,11 @@ h2 {
 .phone-link {
   color: white;
   font-size: 1.15rem;
+  text-underline-offset: 0.35rem;
+}
+.facebook-link {
+  color: white;
+  font-size: 0.9rem;
   text-underline-offset: 0.35rem;
 }
 
@@ -723,6 +777,18 @@ footer p:last-child {
   }
   .about-copy {
     padding: 3.5rem 1.25rem;
+  }
+  .facebook {
+    grid-template-columns: 1fr;
+  }
+  .facebook-mark {
+    display: none;
+  }
+  .facebook-copy {
+    padding: 3.5rem 1.25rem;
+  }
+  .facebook-copy > p:not(.section-label) {
+    font-size: 1rem;
   }
   .pricing-intro {
     grid-template-columns: 1fr;

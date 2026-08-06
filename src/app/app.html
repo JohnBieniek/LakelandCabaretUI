@@ -19,6 +19,7 @@
   <nav [class.open]="menuOpen()" aria-label="Primary navigation">
     <a href="#services" (click)="closeMenu()">Services</a>
     <a href="#about" (click)="closeMenu()">Our story</a>
+    <a href="#facebook" (click)="closeMenu()">Facebook</a>
     <a href="#pricing" (click)="closeMenu()">Pricing</a>
     <a class="nav-cta" href="#contact" (click)="closeMenu()">Plan an event <span>↗</span></a>
   </nav>
@@ -103,6 +104,25 @@
     </div>
   </section>
 
+  <section class="facebook" id="facebook">
+    <div class="facebook-mark" aria-hidden="true">f</div>
+    <div class="facebook-copy">
+      <p class="section-label">See what we’ve been up to</p>
+      <h2>Follow the fun on <em>Facebook.</em></h2>
+      <p>
+        Catch our latest events, favorite moments, behind-the-scenes photos, and fresh ideas for
+        making your next celebration unforgettable.
+      </p>
+      <a
+        class="button facebook-button"
+        href="https://www.facebook.com/people/Lakeland-Cabaret/100087638987216/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Visit us on Facebook <span>↗</span></a
+      >
+    </div>
+  </section>
+
   <section class="pricing" id="pricing">
     <div class="pricing-intro">
       <p class="section-label">Straightforward starting points</p>
@@ -160,6 +180,13 @@
         >Contact&#64;LakelandCabaret.com <span>↗</span></a
       >
       <a class="phone-link" href="tel:+15173668859">(517) 366-8859</a>
+      <a
+        class="facebook-link"
+        href="https://www.facebook.com/people/Lakeland-Cabaret/100087638987216/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Message us on Facebook</a
+      >
     </div>
   </section>
 </main>
