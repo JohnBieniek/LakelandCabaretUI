@@ -51,8 +51,8 @@ export class App {
     },
     { src: '/images/dj pov.jpg', alt: 'A DJ booth view of a Lakeland Cabaret event' },
     {
-      src: '/images/bouncy house dj close.jpg',
-      alt: 'Lakeland Cabaret DJ performing near a bouncy house',
+      src: '/images/outdoor dj.png',
+      alt: 'Lakeland Cabaret DJ performing at an outdoor event',
     },
   ];
 

@@ -377,9 +377,6 @@ h2 {
 .dj-slideshow img:nth-child(8) {
   object-position: 62% 25%;
 }
-.dj-slideshow img:nth-child(10) {
-  object-position: 30% 50%;
-}
 .fire-slideshow img:nth-child(2) {
   object-fit: contain;
   background: #344329;
