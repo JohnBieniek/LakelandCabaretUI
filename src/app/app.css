@@ -249,7 +249,8 @@ h2 {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
+  column-gap: 1px;
+  row-gap: 0;
   background: var(--line);
   border: 1px solid var(--line);
 }
