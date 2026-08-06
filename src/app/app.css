@@ -364,12 +364,12 @@ h2 {
   scale: 1.49;
 }
 .dj-slideshow img:nth-child(6) {
-  object-position: 50% 25%;
-}
-.dj-slideshow img:nth-child(7) {
   object-position: 25% 50%;
 }
-.dj-slideshow img:nth-child(8) {
+.dj-slideshow img:nth-child(7) {
+  object-position: 50% 25%;
+}
+.dj-slideshow img:nth-child(9) {
   object-position: 62% 25%;
 }
 .service-copy {
@@ -785,7 +785,7 @@ footer p:last-child {
     height: 340px;
     padding: 0 1.25rem 1.25rem;
   }
-  .dj-slideshow img:nth-child(6) {
+  .dj-slideshow img:nth-child(7) {
     object-position: 50% 20%;
   }
   .photo-frame {
