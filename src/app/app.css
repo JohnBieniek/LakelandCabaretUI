@@ -484,7 +484,7 @@ h2 {
 }
 .facebook-mark {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.14);
