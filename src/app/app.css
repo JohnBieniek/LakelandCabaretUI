@@ -256,12 +256,12 @@ h2 {
 .service-card {
   display: grid;
   grid-template-columns: 44% 56%;
-  min-height: 340px;
+  min-height: 400px;
   background: var(--paper);
 }
 .service-image {
   position: relative;
-  min-height: 340px;
+  min-height: 400px;
   overflow: hidden;
 }
 .service-image img {
@@ -694,7 +694,7 @@ footer p:last-child {
     grid-template-columns: 1fr;
   }
   .service-image {
-    min-height: 300px;
+    min-height: 330px;
   }
   .about-copy {
     padding: 4rem;
@@ -826,7 +826,7 @@ footer p:last-child {
     min-height: 0;
   }
   .service-image {
-    min-height: 310px;
+    min-height: 350px;
   }
   .service-copy {
     min-height: 250px;
