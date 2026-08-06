@@ -506,7 +506,8 @@ h2 {
   color: rgba(255, 255, 255, 0.72);
 }
 .facebook-copy h2 {
-  max-width: 850px;
+  width: max-content;
+  max-width: 100%;
   margin-bottom: 1.5rem;
   white-space: nowrap;
 }
