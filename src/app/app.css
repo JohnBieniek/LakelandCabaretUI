@@ -414,6 +414,9 @@ h2 {
 .service-card:nth-child(3):hover .service-image img {
   transform: scale(1.38);
 }
+.service-card:nth-child(4) .service-image img {
+  object-position: 50% 25%;
+}
 
 .about {
   display: grid;

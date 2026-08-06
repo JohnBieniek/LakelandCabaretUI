@@ -97,8 +97,8 @@ export class App {
       eyebrow: 'Make it official',
       description:
         'A warm, personal ceremony shaped around your story, your people, and the kind of day you want to remember.',
-      image: '/images/officiant.webp',
-      imageAlt: 'A wedding ceremony led by a Lakeland Cabaret officiant',
+      image: '/images/suitable officiant.jpg',
+      imageAlt: 'A Lakeland Cabaret officiant standing with a newly married couple',
       detail: 'Consultation available',
     },
   ];
