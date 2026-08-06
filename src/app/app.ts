@@ -51,7 +51,7 @@ export class App {
   ];
 
   protected readonly firePhotos = [
-    { src: '/images/mccordy whip.jpg', alt: 'Lakeland Cabaret fire whip performance' },
+    { src: '/images/whip tight.png', alt: 'Lakeland Cabaret fire whip performance' },
     { src: '/images/ryan ropedart.jpg', alt: 'Ryan performing with a fire rope dart' },
     { src: '/images/mcordy doubles wide.jpg', alt: 'McCordy performing with double fire props' },
     {
