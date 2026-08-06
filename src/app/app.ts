@@ -36,7 +36,7 @@ export class App {
       alt: 'Lakeland Cabaret DJ performing at an event',
     },
     {
-      src: '/images/suit dj.jpg',
+      src: '/images/suit dj tight.png',
       alt: 'Lakeland Cabaret DJ performing in a suit',
     },
     {
