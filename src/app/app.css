@@ -530,8 +530,7 @@ h2 {
 }
 
 @media (min-width: 1051px) {
-  .facebook-mark,
-  .facebook-copy {
+  .facebook-mark {
     transform: translateX(-20%);
   }
 }
