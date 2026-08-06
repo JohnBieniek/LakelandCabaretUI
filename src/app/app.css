@@ -249,6 +249,7 @@ h2 {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -687,6 +688,12 @@ footer p:last-child {
   }
   .photo-frame {
     border-radius: 50% 50% 2px 2px / 24% 24% 2px 2px;
+  }
+}
+
+@media (min-width: 1051px) {
+  .service-image {
+    height: 100%;
   }
 }
 
