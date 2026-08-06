@@ -489,9 +489,9 @@ h2 {
   overflow: hidden;
   color: rgba(255, 255, 255, 0.14);
   font-family: Arial, sans-serif;
-  font-size: clamp(24rem, 38vw, 46rem);
+  font-size: clamp(14rem, 18vw, 20rem);
   font-weight: 700;
-  line-height: 0.72;
+  line-height: 0.8;
   user-select: none;
 }
 .facebook-copy {
