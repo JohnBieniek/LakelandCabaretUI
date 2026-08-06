@@ -281,7 +281,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: clamp(1.5rem, 2.5vw, 2.5rem);
+  padding: clamp(1rem, 1.5vw, 1.5rem) clamp(1.5rem, 2.5vw, 2.5rem);
 }
 .eyebrow {
   margin-bottom: 1.25rem;
