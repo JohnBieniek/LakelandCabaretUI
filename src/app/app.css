@@ -380,6 +380,14 @@ h2 {
 .dj-slideshow img:nth-child(10) {
   object-position: 30% 50%;
 }
+.fire-slideshow img:nth-child(2) {
+  object-fit: contain;
+  background: #344329;
+}
+.fire-slideshow img:nth-child(3) {
+  object-fit: contain;
+  background: #090c0b;
+}
 .service-copy {
   display: flex;
   flex-direction: column;
