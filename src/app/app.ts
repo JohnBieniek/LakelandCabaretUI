@@ -25,6 +25,51 @@ export class App {
   protected readonly menuOpen = signal(false);
   protected readonly currentYear = new Date().getFullYear();
 
+  protected readonly djPhotos = [
+    { src: '/images/k wedding dj.jpg', alt: 'Lakeland Cabaret DJ performing at a wedding' },
+    {
+      src: '/images/close christmas backdrop.png',
+      alt: 'Lakeland Cabaret DJ at a Christmas event',
+    },
+    {
+      src: '/images/mcordy dj.jpg',
+      alt: 'Lakeland Cabaret DJ performing at an event',
+    },
+    {
+      src: '/images/suit dj tight.png',
+      alt: 'Lakeland Cabaret DJ performing in a suit',
+    },
+    {
+      src: '/images/mall christmas far.jpg',
+      alt: 'Lakeland Cabaret DJ performing at a mall Christmas event',
+    },
+    { src: '/images/dance floor dj.jpg', alt: 'Lakeland Cabaret DJ beside a dance floor' },
+    { src: '/images/photography.webp', alt: 'Lakeland Cabaret DJ performing at a holiday event' },
+    { src: '/images/dj pov.jpg', alt: 'A DJ booth view of a Lakeland Cabaret event' },
+    {
+      src: '/images/whoville tight.png',
+      alt: 'Lakeland Cabaret DJ performing at a Whoville event',
+    },
+    {
+      src: '/images/outdoor dj.png',
+      alt: 'Lakeland Cabaret DJ performing at an outdoor event',
+    },
+  ];
+
+  protected readonly firePhotos = [
+    { src: '/images/whip fit.png', alt: 'Lakeland Cabaret fire whip performance' },
+    { src: '/images/ropedart tighter.png', alt: 'Ryan performing with a fire rope dart' },
+    { src: '/images/mccordy wand tight.png', alt: 'McCordy performing with a fire wand' },
+    {
+      src: '/images/kiss cover concert performance.jpg',
+      alt: 'Lakeland Cabaret performing fire at a concert',
+    },
+    { src: '/images/mcordy staff.jpg', alt: 'McCordy performing with a fire staff' },
+    { src: '/images/yard wand.jpg', alt: 'Lakeland Cabaret fire wand performance' },
+    { src: '/images/eating tight.png', alt: 'McCordy performing a fire-eating act' },
+    { src: '/images/mcordy doubles v.jpg', alt: 'McCordy performing with double fire props' },
+  ];
+
   protected readonly services: Service[] = [
     {
       title: 'Music & DJ',
@@ -58,8 +103,8 @@ export class App {
       eyebrow: 'Make it official',
       description:
         'A warm, personal ceremony shaped around your story, your people, and the kind of day you want to remember.',
-      image: '/images/officiant.webp',
-      imageAlt: 'A wedding ceremony led by a Lakeland Cabaret officiant',
+      image: '/images/suitable officiant.jpg',
+      imageAlt: 'A Lakeland Cabaret officiant standing with a newly married couple',
       detail: 'Consultation available',
     },
   ];

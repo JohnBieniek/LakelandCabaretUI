@@ -249,7 +249,8 @@ h2 {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
+  column-gap: 1px;
+  row-gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
 }
@@ -261,6 +262,7 @@ h2 {
 }
 .service-image {
   position: relative;
+  aspect-ratio: 1800 / 2867;
   min-height: 340px;
   overflow: hidden;
 }
@@ -273,15 +275,109 @@ h2 {
     transform 0.7s ease,
     filter 0.7s ease;
 }
+.service-slideshow {
+  position: absolute;
+  inset: 0;
+}
+.dj-slideshow {
+  background: url('/images/k wedding dj.jpg') center / cover no-repeat;
+}
+.fire-slideshow {
+  background: url('/images/whip fit.png') center / cover no-repeat;
+}
+.service-slideshow img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transform: translateX(100%);
+  will-change: transform;
+}
+.dj-slideshow img {
+  animation: dj-photo-cycle 80s infinite;
+  animation-delay: calc(var(--slide-index) * 8s - 2s);
+}
+.fire-slideshow img {
+  animation: fire-photo-cycle 64s infinite;
+  animation-delay: calc(var(--slide-index) * 8s + 2s);
+}
+.fire-slideshow img:first-child {
+  animation-delay: 66s;
+}
+@keyframes dj-photo-cycle {
+  0% {
+    z-index: 2;
+    transform: translateX(100%);
+  }
+  0.75%,
+  10% {
+    z-index: 2;
+    transform: translateX(0);
+  }
+  10.01%,
+  10.75% {
+    z-index: 1;
+    transform: translateX(0);
+  }
+  10.76%,
+  100% {
+    z-index: 0;
+    transform: translateX(100%);
+  }
+}
+@keyframes fire-photo-cycle {
+  0% {
+    z-index: 2;
+    transform: translateX(100%);
+  }
+  0.9375%,
+  12.5% {
+    z-index: 2;
+    transform: translateX(0);
+  }
+  12.51%,
+  13.4375% {
+    z-index: 1;
+    transform: translateX(0);
+  }
+  13.4475%,
+  100% {
+    z-index: 0;
+    transform: translateX(100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-slideshow img {
+    animation: none !important;
+  }
+  .service-slideshow img:first-child {
+    transform: translateX(0);
+  }
+}
 .service-card:hover .service-image img {
   transform: scale(1.035);
   filter: saturate(1);
+}
+.dj-slideshow img:nth-child(3) {
+  object-position: 62% 45%;
+  scale: 1.45;
+}
+.service-card:hover .dj-slideshow img:nth-child(3) {
+  scale: 1.49;
+}
+.dj-slideshow img:nth-child(6) {
+  object-position: 25% 50%;
+}
+.dj-slideshow img:nth-child(7) {
+  object-position: 50% 25%;
+}
+.dj-slideshow img:nth-child(9) {
+  object-position: 62% 25%;
 }
 .service-copy {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: clamp(1rem, 1.5vw, 1.5rem) clamp(1.5rem, 2.5vw, 2.5rem);
+  padding: clamp(0.75rem, 1vw, 1rem) clamp(1.5rem, 2.5vw, 2.5rem);
 }
 .eyebrow {
   margin-bottom: 1.25rem;
@@ -314,6 +410,9 @@ h2 {
 }
 .service-card:nth-child(3):hover .service-image img {
   transform: scale(1.38);
+}
+.service-card:nth-child(4) .service-image img {
+  object-position: 50% 25%;
 }
 
 .about {
@@ -627,6 +726,41 @@ footer p:last-child {
   }
 }
 
+@media (min-width: 1440px) {
+  .hero {
+    grid-template-columns: 55% 45%;
+  }
+  .hero-visual {
+    padding: 155px 1vw 45px 0;
+  }
+  .photo-frame {
+    border-radius: 50% 50% 2px 2px / 24% 24% 2px 2px;
+  }
+}
+
+@media (min-width: 1051px) {
+  .service-card {
+    min-height: 0;
+    aspect-ratio: 1.4269 / 1;
+  }
+}
+
+@media (min-width: 1051px) and (max-width: 1920px) {
+  .service-copy {
+    padding-inline: clamp(1rem, 1.5vw, 1.75rem);
+  }
+
+  .service-detail {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1921px) {
+  .service-detail {
+    font-size: 1.088rem;
+  }
+}
+
 @media (max-width: 1050px) {
   .hero {
     grid-template-columns: 60% 40%;
@@ -728,6 +862,23 @@ footer p:last-child {
   .hero-visual {
     height: 340px;
     padding: 0 1.25rem 1.25rem;
+  }
+  .dj-slideshow img {
+    animation-duration: 50s;
+    animation-delay: calc(var(--slide-index) * 5s + 1s);
+  }
+  .dj-slideshow img:first-child {
+    animation-delay: 51s;
+  }
+  .fire-slideshow img {
+    animation-duration: 40s;
+    animation-delay: calc(var(--slide-index) * 5s + 5s);
+  }
+  .fire-slideshow img:first-child {
+    animation-delay: 45s;
+  }
+  .dj-slideshow img:nth-child(7) {
+    object-position: 50% 20%;
   }
   .photo-frame {
     border-radius: 48% 48% 2px 2px / 28% 28% 2px 2px;

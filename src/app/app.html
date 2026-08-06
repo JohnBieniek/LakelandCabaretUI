@@ -40,11 +40,11 @@
       </div>
     </div>
 
-    <div class="hero-visual" aria-label="Lakeland Cabaret performers">
+    <div class="hero-visual" aria-label="K and Ryan of Lakeland Cabaret">
       <div class="photo-frame">
         <img
-          src="/images/hero.webp"
-          alt="The Lakeland Cabaret team at a lakeside event"
+          src="/images/k ryan swords.jpg"
+          alt="K and Ryan of Lakeland Cabaret posing back-to-back with flaming swords"
           fetchpriority="high"
         />
       </div>
@@ -67,7 +67,33 @@
       @for (service of services; track service.title) {
         <article class="service-card">
           <div class="service-image">
-            <img [src]="service.image" [alt]="service.imageAlt" loading="lazy" />
+            @if (service.title === 'Music & DJ') {
+              <div class="service-slideshow dj-slideshow">
+                @for (photo of djPhotos; track photo.src; let index = $index) {
+                  <img
+                    [src]="photo.src"
+                    [alt]="index === 0 ? photo.alt : ''"
+                    [style.--slide-index]="index"
+                    [attr.aria-hidden]="index === 0 ? null : 'true'"
+                    loading="eager"
+                  />
+                }
+              </div>
+            } @else if (service.title === 'Fire Performance') {
+              <div class="service-slideshow fire-slideshow">
+                @for (photo of firePhotos; track photo.src; let index = $index) {
+                  <img
+                    [src]="photo.src"
+                    [alt]="index === 0 ? photo.alt : ''"
+                    [style.--slide-index]="index"
+                    [attr.aria-hidden]="index === 0 ? null : 'true'"
+                    loading="eager"
+                  />
+                }
+              </div>
+            } @else {
+              <img [src]="service.image" [alt]="service.imageAlt" loading="lazy" />
+            }
           </div>
           <div class="service-copy">
             <p class="eyebrow">{{ service.eyebrow }}</p>
@@ -176,7 +202,9 @@
       Tell us what you’re celebrating and what you want it to feel like. We’ll help with the rest.
     </p>
     <div class="contact-actions">
-      <a class="button button-light" href="mailto:Contact@LakelandCabaret.com?subject=Event%20inquiry"
+      <a
+        class="button button-light"
+        href="mailto:Contact@LakelandCabaret.com?subject=Event%20inquiry"
         >Contact&#64;LakelandCabaret.com <span>↗</span></a
       >
       <a class="phone-link" href="tel:+15173668859">(517) 366-8859</a>
