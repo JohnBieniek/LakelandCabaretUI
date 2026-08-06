@@ -786,6 +786,20 @@ footer p:last-child {
     height: 340px;
     padding: 0 1.25rem 1.25rem;
   }
+  .dj-slideshow img {
+    animation-duration: 50s;
+    animation-delay: calc(var(--slide-index) * 5s + 1s);
+  }
+  .dj-slideshow img:first-child {
+    animation-delay: 51s;
+  }
+  .fire-slideshow img {
+    animation-duration: 40s;
+    animation-delay: calc(var(--slide-index) * 5s + 5s);
+  }
+  .fire-slideshow img:first-child {
+    animation-delay: 45s;
+  }
   .dj-slideshow img:nth-child(7) {
     object-position: 50% 20%;
   }
