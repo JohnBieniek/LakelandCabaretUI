@@ -701,6 +701,12 @@ footer p:last-child {
   }
 }
 
+@media (min-width: 1921px) {
+  .service-detail {
+    font-size: 1.088rem;
+  }
+}
+
 @media (max-width: 1050px) {
   .hero {
     grid-template-columns: 60% 40%;
