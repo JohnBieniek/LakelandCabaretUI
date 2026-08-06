@@ -377,7 +377,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: clamp(1.5rem, 2.5vw, 2.5rem);
+  padding: clamp(0.75rem, 1vw, 1rem) clamp(1.5rem, 2.5vw, 2.5rem);
 }
 .eyebrow {
   margin-bottom: 1.25rem;
@@ -685,7 +685,7 @@ footer p:last-child {
 }
 
 @media (min-width: 1051px) {
-  .service-card:nth-child(-n + 2) {
+  .service-card {
     min-height: 0;
     aspect-ratio: 1.4269 / 1;
   }
