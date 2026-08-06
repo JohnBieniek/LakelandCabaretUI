@@ -299,6 +299,9 @@ h2 {
   animation: fire-photo-cycle 64s infinite;
   animation-delay: calc(var(--slide-index) * 8s + 2s);
 }
+.fire-slideshow img:first-child {
+  animation-delay: 66s;
+}
 @keyframes dj-photo-cycle {
   0% {
     z-index: 2;
