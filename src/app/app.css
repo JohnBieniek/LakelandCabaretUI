@@ -530,8 +530,19 @@ h2 {
 }
 
 @media (min-width: 1051px) {
+  .facebook {
+    position: relative;
+    grid-template-columns: 1fr;
+  }
   .facebook-mark {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 32.5%;
     transform: translateX(-20%);
+  }
+  .facebook-copy {
+    position: relative;
+    width: 100%;
   }
 }
 
