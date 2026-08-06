@@ -293,11 +293,11 @@ h2 {
 }
 .dj-slideshow img {
   animation: dj-photo-cycle 80s infinite;
-  animation-delay: calc(var(--slide-index) * 8s);
+  animation-delay: calc(var(--slide-index) * 8s - 2s);
 }
 .fire-slideshow img {
   animation: fire-photo-cycle 64s infinite;
-  animation-delay: calc(var(--slide-index) * 8s);
+  animation-delay: calc(var(--slide-index) * 8s + 2s);
 }
 @keyframes dj-photo-cycle {
   0% {
