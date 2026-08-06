@@ -59,7 +59,7 @@ export class App {
   protected readonly firePhotos = [
     { src: '/images/whip fit.png', alt: 'Lakeland Cabaret fire whip performance' },
     { src: '/images/ropedart tighter.png', alt: 'Ryan performing with a fire rope dart' },
-    { src: '/images/mcordy doubles v.jpg', alt: 'McCordy performing with double fire props' },
+    { src: '/images/mccordy wand tight.png', alt: 'McCordy performing with a fire wand' },
     {
       src: '/images/kiss cover concert performance.jpg',
       alt: 'Lakeland Cabaret performing fire at a concert',
@@ -67,7 +67,7 @@ export class App {
     { src: '/images/mcordy staff.jpg', alt: 'McCordy performing with a fire staff' },
     { src: '/images/yard wand.jpg', alt: 'Lakeland Cabaret fire wand performance' },
     { src: '/images/eating tight.png', alt: 'McCordy performing a fire-eating act' },
-    { src: '/images/mccordy wand tight.png', alt: 'McCordy performing with a fire wand' },
+    { src: '/images/mcordy doubles v.jpg', alt: 'McCordy performing with double fire props' },
   ];
 
   protected readonly services: Service[] = [
