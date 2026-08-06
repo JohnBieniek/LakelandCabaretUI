@@ -528,6 +528,13 @@ h2 {
   background: var(--sun);
 }
 
+@media (min-width: 1051px) {
+  .facebook-mark,
+  .facebook-copy {
+    transform: translateX(-20%);
+  }
+}
+
 .pricing {
   padding: clamp(1.25rem, 2vw, 2.25rem) clamp(1.5rem, 6vw, 7.5rem)
     clamp(2.25rem, 4vw, 4.5rem);
