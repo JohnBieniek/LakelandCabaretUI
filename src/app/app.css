@@ -261,6 +261,7 @@ h2 {
 }
 .service-image {
   position: relative;
+  align-self: stretch;
   aspect-ratio: 1800 / 2867;
   min-height: 340px;
   overflow: hidden;
