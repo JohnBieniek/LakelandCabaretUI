@@ -67,7 +67,7 @@ export class App {
     { src: '/images/mcordy staff.jpg', alt: 'McCordy performing with a fire staff' },
     { src: '/images/yard wand.jpg', alt: 'Lakeland Cabaret fire wand performance' },
     { src: '/images/mcordy eating.jpg', alt: 'McCordy performing a fire-eating act' },
-    { src: '/images/mcordy wand.jpg', alt: 'McCordy performing with a fire wand' },
+    { src: '/images/mccordy wand tight.png', alt: 'McCordy performing with a fire wand' },
   ];
 
   protected readonly services: Service[] = [
