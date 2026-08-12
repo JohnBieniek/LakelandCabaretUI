@@ -726,10 +726,13 @@ h2 {
   letter-spacing: 0.14em;
 }
 .whimsy-logo {
+  display: inline-block;
+  color: inherit;
   font-family: 'Italiana', serif;
   font-size: clamp(2.6rem, 5vw, 4.5rem);
   line-height: 1;
   letter-spacing: -0.06em;
+  text-decoration: none;
 }
 .whimsy-logo span {
   color: var(--sun);
