@@ -712,7 +712,7 @@ h2 {
 }
 
 .website-partner {
-  padding: clamp(2.25rem, 5vw, 4rem) 1.5rem;
+  padding: clamp(1.25rem, 2.5vw, 2rem) 1.5rem;
   color: var(--ink);
   background: var(--paper);
   text-align: center;
@@ -732,6 +732,14 @@ h2 {
 .whimsy-logo img {
   width: 100%;
   height: auto;
+}
+.whimsy-link {
+  display: block;
+  width: fit-content;
+  margin: 0.35rem auto 0;
+  color: #726d76;
+  font-size: 0.82rem;
+  text-underline-offset: 0.25rem;
 }
 
 footer {
