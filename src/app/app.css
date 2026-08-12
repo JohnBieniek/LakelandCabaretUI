@@ -711,6 +711,31 @@ h2 {
   text-underline-offset: 0.35rem;
 }
 
+.website-partner {
+  padding: clamp(2.25rem, 5vw, 4rem) 1.5rem;
+  color: var(--ink);
+  background: var(--paper);
+  text-align: center;
+}
+.website-partner p {
+  margin: 0 0 0.65rem;
+  color: #726d76;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.whimsy-logo {
+  font-family: 'Italiana', serif;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+.whimsy-logo span {
+  color: var(--sun);
+  font-style: italic;
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
