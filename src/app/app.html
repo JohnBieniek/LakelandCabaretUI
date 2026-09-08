@@ -1,9 +1,9 @@
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header">
-  <a class="brand" href="#top" aria-label="Lakeland Cabaret home" (click)="closeMenu()">
+  <a class="brand" href="#top" [attr.aria-label]="business.name + ' home'" (click)="closeMenu()">
     <img src="/images/logo.png" alt="" width="54" height="54" />
-    <span>Lakeland Cabaret</span>
+    <span>{{ business.name }}</span>
   </a>
 
   <button
@@ -28,49 +28,60 @@
 <main id="main">
   <section class="hero" id="top">
     <div class="hero-copy">
-      <p class="kicker"><span></span> Mid-Michigan entertainment collective</p>
-      <h1>Every event<br />deserves a little <em>wonder.</em></h1>
-      <p class="hero-intro">
-        Music, fire performance, photography, videography, and<br />wedding ceremonies—brought
-        together by one delightfully creative team. Lakeland Cabaret has everything you need
-        to make any event special!
-      </p>
+      <p class="kicker"><span></span>{{ page.hero.label1 }}</p>
+      <h1>
+        {{ page.hero.heading1 }}<br />{{ page.hero.heading2 }} <em>{{ page.hero.heading3 }}</em>
+      </h1>
+      <p class="hero-intro">{{ page.hero.paragraph1 }}</p>
       <div class="hero-actions">
         <a class="button button-primary" href="#contact">Tell us your idea <span>↗</span></a>
         <a class="text-link" href="#services">Explore what we do <span>↓</span></a>
       </div>
     </div>
 
-    <div class="hero-visual" aria-label="K and Ryan of Lakeland Cabaret">
+    <div class="hero-visual">
       <div class="photo-frame">
-        <img
-          src="/images/k ryan swords.jpg"
-          alt="K and Ryan of Lakeland Cabaret posing back-to-back with flaming swords"
-          fetchpriority="high"
-        />
+        <img [src]="page.hero.image" [alt]="page.hero.imageAlt" fetchpriority="high" />
       </div>
     </div>
   </section>
 
+  @if (announcements.items.length) {
+    <section class="content-section" aria-labelledby="announcements-heading">
+      <h2 id="announcements-heading">{{ announcements.heading }}</h2>
+      <div class="content-grid">
+        @for (item of announcements.items; track $index) {
+          <article>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.body }}</p>
+          </article>
+        }
+      </div>
+    </section>
+  }
+
   <section class="services" id="services">
     <div class="section-heading">
       <div>
-        <p class="section-label">What we bring</p>
-        <h2>One creative team.<br /><em>So many possibilities.</em></h2>
+        <p class="section-label">{{ page.services.label1 }}</p>
+        <h2>
+          {{ page.services.heading1 }}<br /><em>{{ page.services.heading2 }}</em>
+        </h2>
       </div>
-      <p>
-        Choose one service or combine a few. We’ll shape the experience around your people, your
-        place, and your vision.
-      </p>
+      <p>{{ page.services.paragraph1 }}</p>
     </div>
 
     <div class="service-grid">
-      @for (service of services; track service.title) {
+      @for (entry of services; track entry.key) {
+        @let service = entry.content;
         <article class="service-card">
           <div class="service-image">
-            @if (service.title === 'Music & DJ') {
-              <div class="service-slideshow dj-slideshow">
-                @for (photo of djPhotos; track photo.src; let index = $index) {
+            @if (entry.key === 'music') {
+              <div
+                class="service-slideshow dj-slideshow"
+                [style.background-image]="photoBackground(djPhotos[0].src)"
+              >
+                @for (photo of djPhotos; track $index; let index = $index) {
                   <img
                     [src]="photo.src"
                     [alt]="index === 0 ? photo.alt : ''"
@@ -80,9 +91,12 @@
                   />
                 }
               </div>
-            } @else if (service.title === 'Fire Performance') {
-              <div class="service-slideshow fire-slideshow">
-                @for (photo of firePhotos; track photo.src; let index = $index) {
+            } @else if (entry.key === 'fire') {
+              <div
+                class="service-slideshow fire-slideshow"
+                [style.background-image]="photoBackground(firePhotos[0].src)"
+              >
+                @for (photo of firePhotos; track $index; let index = $index) {
                   <img
                     [src]="photo.src"
                     [alt]="index === 0 ? photo.alt : ''"
@@ -109,24 +123,16 @@
 
   <section class="about" id="about">
     <div class="about-image">
-      <img
-        src="/images/performer.webp"
-        alt="Lakeland Cabaret DJ in costume at a Halloween event"
-        loading="lazy"
-      />
-      <span class="image-caption">Playful by nature<br />Professional by practice</span>
+      <img [src]="page.about.image" [alt]="page.about.imageAlt" loading="lazy" />
+      <span class="image-caption">{{ page.about.caption1 }}<br />{{ page.about.caption2 }}</span>
     </div>
     <div class="about-copy">
-      <p class="section-label">Meet Lakeland Cabaret</p>
-      <h2>Good events feel effortless.<br /><em>That takes care.</em></h2>
-      <p class="lead">
-        Lakeland Cabaret is a small, multi-talented entertainment team built for people who want
-        their celebration to feel personal.
-      </p>
-      <p>
-        Not sure what you need yet? That’s completely fine. Bring us the occasion, the mood, or even
-        half an idea. We’ll help turn it into a plan that feels unmistakably yours.
-      </p>
+      <p class="section-label">{{ page.about.label1 }}</p>
+      <h2>
+        {{ page.about.heading1 }}<br /><em>{{ page.about.heading2 }}</em>
+      </h2>
+      <p class="lead">{{ page.about.paragraph1 }}</p>
+      <p>{{ page.about.paragraph2 }}</p>
       <a class="text-link dark" href="#contact">Start a conversation <span>↗</span></a>
     </div>
   </section>
@@ -134,12 +140,11 @@
   <section class="facebook" id="facebook">
     <div class="facebook-mark" aria-hidden="true">f</div>
     <div class="facebook-copy">
-      <p class="section-label">See what we’ve been up to</p>
-      <h2>Follow the fun on <em>Facebook.</em></h2>
-      <p>
-        Catch our latest events, favorite moments, behind-the-scenes photos, and fresh ideas for
-        making your next celebration unforgettable.
-      </p>
+      <p class="section-label">{{ page.facebook.label1 }}</p>
+      <h2>
+        {{ page.facebook.heading1 }} <em>{{ page.facebook.heading2 }}</em>
+      </h2>
+      <p>{{ page.facebook.paragraph1 }}</p>
       <a
         class="button facebook-button"
         href="https://www.facebook.com/people/Lakeland-Cabaret/100087638987216/"
@@ -152,29 +157,28 @@
 
   <section class="pricing" id="pricing">
     <div class="pricing-intro">
-      <p class="section-label">Straightforward starting points</p>
-      <h2>Services &amp; <em>pricing</em></h2>
-      <p>
-        Every event is different. These prices are a useful starting point; contact us for a quote
-        tailored to your date, location, and plans.
-      </p>
+      <p class="section-label">{{ page.pricing.label1 }}</p>
+      <h2>
+        {{ page.pricing.heading1 }} <em>{{ page.pricing.heading2 }}</em>
+      </h2>
+      <p>{{ page.pricing.paragraph1 }}</p>
     </div>
 
     <div class="price-groups">
-      @for (group of pricing; track group.title) {
+      @for (group of pricing; track $index) {
         <article class="price-group">
           <header>
             <h3>{{ group.title }}</h3>
             @if (group.description) {
               <div class="price-group-description">
-                @for (paragraph of group.description; track paragraph) {
+                @for (paragraph of group.description; track $index) {
                   <p>{{ paragraph }}</p>
                 }
               </div>
             }
           </header>
           <ul>
-            @for (item of group.items; track item.name) {
+            @for (item of group.items; track $index) {
               <li>
                 <span class="price-name"
                   >{{ item.name }}
@@ -189,26 +193,79 @@
         </article>
       }
     </div>
-    <p class="pricing-note">
-      Holiday programming includes Valentine’s Day, St. Patrick’s Day, Independence Day, Halloween,
-      Christmas, and more.
-    </p>
+    <p class="pricing-note">{{ page.pricing.paragraph2 }}</p>
   </section>
+
+  @if (staff.items.length) {
+    <section class="content-section" aria-labelledby="staff-heading">
+      <h2 id="staff-heading">{{ staff.heading }}</h2>
+      <div class="content-grid">
+        @for (person of staff.items; track $index) {
+          <article>
+            @if (person.image) {
+              <img [src]="person.image" [alt]="person.imageAlt" loading="lazy" />
+            }
+            <h3>{{ person.name }}</h3>
+            <p class="eyebrow">{{ person.role }}</p>
+            <p>{{ person.bio }}</p>
+          </article>
+        }
+      </div>
+    </section>
+  }
+  @if (testimonials.items.length) {
+    <section class="content-section" aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading">{{ testimonials.heading }}</h2>
+      <div class="content-grid">
+        @for (item of testimonials.items; track $index) {
+          <figure>
+            <blockquote>{{ item.quote }}</blockquote>
+            <figcaption>
+              {{ item.name }}
+              @if (item.context) {
+                — {{ item.context }}
+              }
+            </figcaption>
+          </figure>
+        }
+      </div>
+    </section>
+  }
+  @if (faqs.items.length) {
+    <section class="content-section" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">{{ faqs.heading }}</h2>
+      @for (item of faqs.items; track $index) {
+        <details>
+          <summary>{{ item.question }}</summary>
+          <p>{{ item.answer }}</p>
+        </details>
+      }
+    </section>
+  }
 
   <section class="contact" id="contact">
     <div class="contact-star" aria-hidden="true">✦</div>
-    <p class="section-label">Let’s make something memorable</p>
-    <h2>Have a date in mind?<br /><em>Let’s talk.</em></h2>
-    <p>
-      Tell us what you’re celebrating and what you want it to feel like. We’ll help with the rest.
-    </p>
+    <p class="section-label">{{ page.contact.label1 }}</p>
+    <h2>
+      {{ page.contact.heading1 }}<br /><em>{{ page.contact.heading2 }}</em>
+    </h2>
+    <p>{{ page.contact.paragraph1 }}</p>
+    @if (business.address) {
+      <p class="business-address">{{ business.address }}</p>
+    }
+    @if (business.hours.length) {
+      <dl class="business-hours">
+        @for (hour of business.hours; track $index) {
+          <div>
+            <dt>{{ hour.days }}</dt>
+            <dd>{{ hour.hours }}</dd>
+          </div>
+        }
+      </dl>
+    }
     <div class="contact-actions">
-      <a
-        class="button button-light"
-        href="mailto:Contact@LakelandCabaret.com?subject=Event%20inquiry"
-        >Contact&#64;LakelandCabaret.com <span>↗</span></a
-      >
-      <a class="phone-link" href="tel:+15173668859">(517) 366-8859</a>
+      <a class="button button-light" [href]="emailHref">{{ business.email }} <span>↗</span></a>
+      <a class="phone-link" [href]="phoneHref">{{ business.phone }}</a>
       <a
         class="facebook-link"
         href="https://www.facebook.com/people/Lakeland-Cabaret/100087638987216/"
@@ -227,8 +284,8 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WHimsy on Facebook"
-      ><img src="/images/logo%20tight.png" alt="WHimsy" /></a
-    >
+      ><img src="/images/logo%20tight.png" alt="WHimsy"
+    /></a>
     <a
       class="whimsy-link"
       href="https://www.facebook.com/Experiencewhimsy"
@@ -242,8 +299,8 @@
 <footer>
   <a class="brand footer-brand" href="#top">
     <img src="/images/logo.png" alt="" width="60" height="60" />
-    <span>Lakeland Cabaret</span>
+    <span>{{ business.name }}</span>
   </a>
-  <p>Music · Fire · Photo · Video · Ceremonies</p>
-  <p>© {{ currentYear }} Lakeland Cabaret</p>
+  <p>{{ business.tagline }}</p>
+  <p>© {{ currentYear }} {{ business.name }}</p>
 </footer>

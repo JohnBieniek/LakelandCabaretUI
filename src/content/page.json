@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "label1": "Mid-Michigan entertainment collective",
+    "heading1": "Every event",
+    "heading2": "deserves a little",
+    "heading3": "wonder.",
+    "paragraph1": "Music, fire performance, photography, videography, and wedding ceremonies—brought together by one delightfully creative team. Lakeland Cabaret has everything you need to make any event special!",
+    "image": "/images/k ryan swords.jpg",
+    "imageAlt": "K and Ryan of Lakeland Cabaret posing back-to-back with flaming swords"
+  },
+  "services": {
+    "label1": "What we bring",
+    "heading1": "One creative team.",
+    "heading2": "So many possibilities.",
+    "paragraph1": "Choose one service or combine a few. We’ll shape the experience around your people, your place, and your vision."
+  },
+  "about": {
+    "caption1": "Playful by nature",
+    "caption2": "Professional by practice",
+    "label1": "Meet Lakeland Cabaret",
+    "heading1": "Good events feel effortless.",
+    "heading2": "That takes care.",
+    "paragraph1": "Lakeland Cabaret is a small, multi-talented entertainment team built for people who want their celebration to feel personal.",
+    "paragraph2": "Not sure what you need yet? That’s completely fine. Bring us the occasion, the mood, or even half an idea. We’ll help turn it into a plan that feels unmistakably yours.",
+    "image": "/images/performer.webp",
+    "imageAlt": "Lakeland Cabaret DJ in costume at a Halloween event"
+  },
+  "facebook": {
+    "label1": "See what we’ve been up to",
+    "heading1": "Follow the fun on",
+    "heading2": "Facebook.",
+    "paragraph1": "Catch our latest events, favorite moments, behind-the-scenes photos, and fresh ideas for making your next celebration unforgettable."
+  },
+  "pricing": {
+    "label1": "Straightforward starting points",
+    "heading1": "Services &",
+    "heading2": "pricing",
+    "paragraph1": "Every event is different. These prices are a useful starting point; contact us for a quote tailored to your date, location, and plans.",
+    "paragraph2": "Holiday programming includes Valentine’s Day, St. Patrick’s Day, Independence Day, Halloween, Christmas, and more."
+  },
+  "contact": {
+    "label1": "Let’s make something memorable",
+    "heading1": "Have a date in mind?",
+    "heading2": "Let’s talk.",
+    "paragraph1": "Tell us what you’re celebrating and what you want it to feel like. We’ll help with the rest."
+  }
+}

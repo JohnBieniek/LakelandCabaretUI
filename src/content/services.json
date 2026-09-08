@@ -1,0 +1,34 @@
+{
+  "music": {
+    "title": "Music & DJ",
+    "eyebrow": "Set the tone",
+    "description": "Thoughtful music for weddings, holidays, graduations, festivals, and every celebration in between.",
+    "image": "/images/photography.webp",
+    "imageAlt": "Lakeland Cabaret DJ performing at a holiday event",
+    "detail": "Custom playlists available"
+  },
+  "fire": {
+    "title": "Fire Performance",
+    "eyebrow": "Light up the night",
+    "description": "A bold, unforgettable spectacle featuring fire poi, fans, staffs, rope dart, sword, torches, and more.",
+    "image": "/images/wedding.webp",
+    "imageAlt": "Lakeland Cabaret fire performers in theatrical masks",
+    "detail": "Indoor and outdoor options"
+  },
+  "photo": {
+    "title": "Photo & Video",
+    "eyebrow": "Keep the moment",
+    "description": "Natural, story-led photography and videography for families, graduates, events, and once-in-a-lifetime days.",
+    "image": "/images/portrait.webp",
+    "imageAlt": "A Lakeland Cabaret photographer working beside a stream",
+    "detail": "Flexible session lengths"
+  },
+  "officiant": {
+    "title": "Wedding Officiant",
+    "eyebrow": "Make it official",
+    "description": "A warm, personal ceremony shaped around your story, your people, and the kind of day you want to remember.",
+    "image": "/images/suitable officiant.jpg",
+    "imageAlt": "A Lakeland Cabaret officiant standing with a newly married couple",
+    "detail": "Consultation available"
+  }
+}

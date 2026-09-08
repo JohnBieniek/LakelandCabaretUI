@@ -8,7 +8,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run validate:content && ng build",
+    "validate:content": "node scripts/validate-content.mjs",
+    "test:content": "node --test scripts/validate-content.test.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:lakeland-cabaret-ui": "node dist/lakeland-cabaret-ui/server/server.mjs"
@@ -37,6 +39,7 @@
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.8",
+    "yaml": "^2.9.0"
   }
 }

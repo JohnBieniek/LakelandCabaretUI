@@ -11,6 +11,68 @@
   background: var(--paper);
   transform: translateY(-120%);
 }
+
+.content-section {
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 6vw, 6rem);
+  background: var(--paper);
+  overflow-wrap: anywhere;
+}
+.content-section h2 {
+  margin-bottom: 1.5rem;
+}
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 2rem;
+}
+.content-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.content-grid figure,
+.content-grid blockquote {
+  margin: 0;
+}
+.content-grid figcaption {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.content-section p,
+.content-section blockquote {
+  white-space: pre-line;
+}
+.content-section details {
+  padding: 1rem 0;
+  border-bottom: 1px solid currentColor;
+}
+.content-section summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.business-address {
+  white-space: pre-line;
+}
+.business-hours {
+  margin: 1.5rem auto;
+  width: fit-content;
+}
+.business-hours div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+}
+.business-hours dd {
+  margin: 0;
+}
+.service-copy,
+.price-group,
+.hero-copy,
+.about-copy,
+.contact {
+  overflow-wrap: anywhere;
+}
 .skip-link:focus {
   transform: translateY(0);
 }
@@ -212,8 +274,7 @@ h2 em {
 }
 
 .services {
-  padding: clamp(0.75rem, 1.5vw, 1.5rem) clamp(1.5rem, 6vw, 7.5rem)
-    clamp(2.5rem, 5vw, 5rem);
+  padding: clamp(0.75rem, 1.5vw, 1.5rem) clamp(1.5rem, 6vw, 7.5rem) clamp(2.5rem, 5vw, 5rem);
   background: var(--cream);
 }
 .section-heading {
@@ -548,8 +609,7 @@ h2 {
 }
 
 .pricing {
-  padding: clamp(1.25rem, 2vw, 2.25rem) clamp(1.5rem, 6vw, 7.5rem)
-    clamp(2.25rem, 4vw, 4.5rem);
+  padding: clamp(1.25rem, 2vw, 2.25rem) clamp(1.5rem, 6vw, 7.5rem) clamp(2.25rem, 4vw, 4.5rem);
   background: var(--paper);
 }
 .pricing-intro {
