@@ -1,0 +1,569 @@
+# Clients can update content. Whimsy handles design, layout, and functionality.
+media:
+  input: public/images
+  output: /images
+  extensions:
+    - jpg
+    - jpeg
+    - png
+    - webp
+    - avif
+  rename: safe
+content:
+  - name: business
+    label: Business details & hours
+    type: file
+    path: src/content/business.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: phone
+        label: Phone
+        type: string
+        required: true
+      - name: email
+        label: Email
+        type: string
+        required: true
+      - name: address
+        label: Address
+        type: text
+        required: false
+      - name: hours
+        label: Hours
+        type: object
+        required: false
+        fields:
+          - name: days
+            label: Days
+            type: string
+            required: true
+          - name: hours
+            label: Hours
+            type: string
+            required: true
+        list: true
+      - name: tagline
+        label: Tagline
+        type: string
+        required: true
+  - name: page
+    label: Page headings, text & main photos
+    type: file
+    path: src/content/page.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        required: true
+        fields:
+          - name: label1
+            label: Label 1
+            type: string
+            required: true
+          - name: heading1
+            label: Heading 1
+            type: string
+            required: true
+          - name: heading2
+            label: Heading 2
+            type: string
+            required: true
+          - name: heading3
+            label: Heading 3
+            type: string
+            required: true
+          - name: paragraph1
+            label: Paragraph 1
+            type: text
+            required: true
+          - name: image
+            label: Image
+            type: image
+            required: true
+          - name: imageAlt
+            label: Image Alt
+            type: string
+            required: true
+      - name: services
+        label: Services
+        type: object
+        required: true
+        fields:
+          - name: label1
+            label: Label 1
+            type: string
+            required: true
+          - name: heading1
+            label: Heading 1
+            type: string
+            required: true
+          - name: heading2
+            label: Heading 2
+            type: string
+            required: true
+          - name: paragraph1
+            label: Paragraph 1
+            type: text
+            required: true
+      - name: about
+        label: About
+        type: object
+        required: true
+        fields:
+          - name: caption1
+            label: Caption 1
+            type: string
+            required: true
+          - name: caption2
+            label: Caption 2
+            type: string
+            required: true
+          - name: label1
+            label: Label 1
+            type: string
+            required: true
+          - name: heading1
+            label: Heading 1
+            type: string
+            required: true
+          - name: heading2
+            label: Heading 2
+            type: string
+            required: true
+          - name: paragraph1
+            label: Paragraph 1
+            type: text
+            required: true
+          - name: paragraph2
+            label: Paragraph 2
+            type: text
+            required: true
+          - name: image
+            label: Image
+            type: image
+            required: true
+          - name: imageAlt
+            label: Image Alt
+            type: string
+            required: true
+      - name: facebook
+        label: Facebook
+        type: object
+        required: true
+        fields:
+          - name: label1
+            label: Label 1
+            type: string
+            required: true
+          - name: heading1
+            label: Heading 1
+            type: string
+            required: true
+          - name: heading2
+            label: Heading 2
+            type: string
+            required: true
+          - name: paragraph1
+            label: Paragraph 1
+            type: text
+            required: true
+      - name: pricing
+        label: Pricing
+        type: object
+        required: true
+        fields:
+          - name: label1
+            label: Label 1
+            type: string
+            required: true
+          - name: heading1
+            label: Heading 1
+            type: string
+            required: true
+          - name: heading2
+            label: Heading 2
+            type: string
+            required: true
+          - name: paragraph1
+            label: Paragraph 1
+            type: text
+            required: true
+          - name: paragraph2
+            label: Paragraph 2
+            type: text
+            required: true
+      - name: contact
+        label: Contact
+        type: object
+        required: true
+        fields:
+          - name: label1
+            label: Label 1
+            type: string
+            required: true
+          - name: heading1
+            label: Heading 1
+            type: string
+            required: true
+          - name: heading2
+            label: Heading 2
+            type: string
+            required: true
+          - name: paragraph1
+            label: Paragraph 1
+            type: text
+            required: true
+  - name: services
+    label: Service cards
+    type: file
+    path: src/content/services.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: music
+        label: Music
+        type: object
+        required: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+          - name: detail
+            label: Detail
+            type: string
+            required: true
+      - name: fire
+        label: Fire
+        type: object
+        required: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+          - name: detail
+            label: Detail
+            type: string
+            required: true
+      - name: photo
+        label: Photo
+        type: object
+        required: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+          - name: image
+            label: Image
+            type: image
+            required: true
+          - name: imageAlt
+            label: Image Alt
+            type: string
+            required: true
+          - name: detail
+            label: Detail
+            type: string
+            required: true
+      - name: officiant
+        label: Officiant
+        type: object
+        required: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+          - name: image
+            label: Image
+            type: image
+            required: true
+          - name: imageAlt
+            label: Image Alt
+            type: string
+            required: true
+          - name: detail
+            label: Detail
+            type: string
+            required: true
+  - name: pricing
+    label: Services & prices
+    type: file
+    path: src/content/pricing.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: groups
+        label: Groups
+        type: object
+        required: false
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: false
+            list: true
+          - name: items
+            label: Items
+            type: object
+            required: false
+            fields:
+              - name: name
+                label: Name
+                type: string
+                required: true
+              - name: price
+                label: Price
+                type: string
+                required: true
+              - name: note
+                label: Note
+                type: text
+                required: false
+            list: true
+        list: true
+  - name: photos
+    label: Slideshow photos
+    type: file
+    path: src/content/photos.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: dj
+        label: Music photos (10 slots)
+        type: object
+        required: true
+        fields:
+          - name: src
+            label: Src
+            type: image
+            required: true
+          - name: alt
+            label: Alt
+            type: string
+            required: true
+        list:
+          min: 10
+          max: 10
+      - name: fire
+        label: Fire photos (8 slots)
+        type: object
+        required: true
+        fields:
+          - name: src
+            label: Src
+            type: image
+            required: true
+          - name: alt
+            label: Alt
+            type: string
+            required: true
+        list:
+          min: 8
+          max: 8
+  - name: staff
+    label: Staff profiles
+    type: file
+    path: src/content/staff.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: heading
+        label: Heading
+        type: string
+        required: true
+      - name: items
+        label: Items
+        type: object
+        required: false
+        fields:
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: role
+            label: Role
+            type: string
+            required: true
+          - name: bio
+            label: Bio
+            type: text
+            required: true
+          - name: image
+            label: Image
+            type: image
+            required: true
+          - name: imageAlt
+            label: Image Alt
+            type: string
+            required: true
+        list: true
+  - name: testimonials
+    label: Testimonials
+    type: file
+    path: src/content/testimonials.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: heading
+        label: Heading
+        type: string
+        required: true
+      - name: items
+        label: Items
+        type: object
+        required: false
+        fields:
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: quote
+            label: Quote
+            type: text
+            required: true
+          - name: context
+            label: Context
+            type: string
+            required: false
+        list: true
+  - name: faqs
+    label: FAQs
+    type: file
+    path: src/content/faqs.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: heading
+        label: Heading
+        type: string
+        required: true
+      - name: items
+        label: Items
+        type: object
+        required: false
+        fields:
+          - name: question
+            label: Question
+            type: string
+            required: true
+          - name: answer
+            label: Answer
+            type: text
+            required: true
+        list: true
+  - name: announcements
+    label: Announcements
+    type: file
+    path: src/content/announcements.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: heading
+        label: Heading
+        type: string
+        required: true
+      - name: items
+        label: Items
+        type: object
+        required: false
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: body
+            label: Body
+            type: text
+            required: true
+        list: true
+  - name: seo
+    label: Search engine title & description
+    type: file
+    path: src/content/seo.json
+    format: json
+    operations:
+      create: false
+      delete: false
+      rename: false
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true

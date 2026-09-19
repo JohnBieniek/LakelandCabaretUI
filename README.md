@@ -2,6 +2,12 @@
 
 A responsive Angular 22 website for Lakeland Cabaret, a Mid-Michigan entertainment collective offering music, fire performance, photography, videography, and wedding officiation.
 
+## Client content editor
+
+Pages CMS provides controlled browser forms for business details, page copy, services, prices, photos, staff, testimonials, FAQs, announcements, and SEO. Content is stored in `src/content` and images in `public/images`. Clients can update content; Whimsy handles design, layout, and functionality.
+
+See [CMS-GUIDE.md](CMS-GUIDE.md) for account setup, publishing, daily editing, and recovery instructions. The CMS files must be pushed to GitHub and the owner must connect Pages CMS before the hosted editor can be used.
+
 ## Development
 
 The project pins Node.js 22.22.3 through `.node-version` and `.nvmrc`, which satisfies Angular 22.1 and is automatically detected by common deployment platforms and version managers. After installing dependencies, run:

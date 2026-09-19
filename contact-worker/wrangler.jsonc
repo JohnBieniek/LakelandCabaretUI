@@ -1,0 +1,61 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lakeland-contact-form",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-19",
+  "compatibility_flags": ["nodejs_compat"],
+  "send_email": [
+    {
+      "name": "CONTACT_EMAIL",
+      "destination_address": "contact@lakelandcabaret.com",
+      "allowed_sender_addresses": ["contact-form@experiencewhimsy.com"],
+    },
+  ],
+  "d1_databases": [
+    {
+      "binding": "CONTACT_DB",
+      "database_name": "lakeland-contact-inquiries",
+      "database_id": "3fa7f3a1-978a-43dc-9bae-846f7de6218a",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "CONTACT_QUEUE",
+        "queue": "lakeland-contact-email",
+      },
+      {
+        "binding": "CONTACT_DLQ",
+        "queue": "lakeland-contact-email-dlq",
+      },
+    ],
+    "consumers": [
+      {
+        "queue": "lakeland-contact-email",
+        "max_batch_size": 1,
+        "max_batch_timeout": 5,
+        "max_retries": 5,
+        "dead_letter_queue": "lakeland-contact-email-dlq",
+      },
+      {
+        "queue": "lakeland-contact-email-events",
+        "max_batch_size": 10,
+        "max_batch_timeout": 5,
+        "max_retries": 5,
+        "dead_letter_queue": "lakeland-contact-email-dlq",
+      },
+    ],
+  },
+  "triggers": {
+    "crons": ["*/5 * * * *"],
+  },
+  "vars": {
+    "ALLOWED_ORIGINS": "https://lakelandcabaret.com,https://www.lakelandcabaret.com,https://lakelandcabaretui.pages.dev,https://lakelandcabaretui-dev.pages.dev,http://localhost:4200",
+    "FROM_ADDRESS": "contact-form@experiencewhimsy.com",
+    "TO_ADDRESS": "contact@lakelandcabaret.com",
+  },
+  "observability": {
+    "enabled": true,
+  },
+}

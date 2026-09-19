@@ -1,0 +1,57 @@
+<form class="contact-form" (submit)="submit($event)" [attr.aria-busy]="status() === 'sending'">
+  <div class="form-heading">
+    <p>All fields are required.</p>
+  </div>
+  <fieldset [disabled]="status() === 'sending'">
+    <legend class="visually-hidden">Your event inquiry</legend>
+    <div class="form-row">
+      <label>Desired date *<input required type="date" name="desiredDate" /></label>
+      <label
+        >What service would you like? *
+        <select required name="service">
+          <option value="" disabled selected>Choose a service</option>
+          @for (service of services(); track service) {
+            <option [value]="service">{{ service }}</option>
+          }
+          <option>Multiple services</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+    </div>
+    <div class="form-row">
+      <label
+        >Name *<input
+          required
+          name="name"
+          autocomplete="name"
+          maxlength="100"
+          placeholder="Your full name"
+      /></label>
+      <label
+        >Email address *<input
+          required
+          type="email"
+          name="email"
+          autocomplete="email"
+          maxlength="254"
+          placeholder="you@example.com"
+      /></label>
+    </div>
+    <label
+      >Event details *<textarea
+        required
+        name="details"
+        rows="5"
+        maxlength="5000"
+        placeholder="Tell us about your event, location, and what you have in mind."
+      ></textarea>
+    </label>
+    <input name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <button class="submit-button" type="submit">
+      {{ status() === 'sending' ? 'Sending…' : 'Send inquiry ↗' }}
+    </button>
+  </fieldset>
+  <p class="form-status" [class]="'form-status ' + status()" role="status" aria-live="polite">
+    {{ message() }}
+  </p>
+</form>
