@@ -7,7 +7,7 @@
   "send_email": [
     {
       "name": "CONTACT_EMAIL",
-      "destination_address": "Contact@LakelandCabaret.com",
+      "destination_address": "contact@lakelandcabaret.com",
       "allowed_sender_addresses": ["contact-form@experiencewhimsy.com"],
     },
   ],
@@ -53,7 +53,7 @@
   "vars": {
     "ALLOWED_ORIGINS": "https://lakelandcabaret.com,https://www.lakelandcabaret.com,https://lakelandcabaretui.pages.dev,https://lakelandcabaretui-dev.pages.dev,http://localhost:4200",
     "FROM_ADDRESS": "contact-form@experiencewhimsy.com",
-    "TO_ADDRESS": "Contact@LakelandCabaret.com",
+    "TO_ADDRESS": "contact@lakelandcabaret.com",
   },
   "observability": {
     "enabled": true,

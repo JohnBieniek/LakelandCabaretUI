@@ -5,11 +5,13 @@ It requires `desiredDate` (a real `YYYY-MM-DD` date), `service`, `name`, `email`
 and `details`. Both browser and server validate the required fields. The hidden
 `website` field must remain empty; `submissionId` is a client-generated UUID.
 
-Inquiries go to **Contact@LakelandCabaret.com**, from
+Inquiries go to **contact@lakelandcabaret.com**, from
 `contact-form@experiencewhimsy.com` with the display name **Lakeland Cabaret Website**.
 The visitor's email is the reply-to address. The destination must be verified in
 Cloudflare Email Routing before this existing Whimsy sending setup can deliver.
-Cloudflare sent the verification email on September 19, 2026.
+This destination was verified on September 19, 2026. Keep both `destination_address`
+and `TO_ADDRESS` identical to Cloudflare's lowercase verified address: the original
+mixed-case configuration was rejected as unverified even after verification.
 
 ## Delivery and retry behavior
 
