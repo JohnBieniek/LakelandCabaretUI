@@ -1,6 +1,5 @@
 <form class="contact-form" (submit)="submit($event)" [attr.aria-busy]="status() === 'sending'">
   <div class="form-heading">
-    <h3>Let’s make a plan.</h3>
     <p>All fields are required.</p>
   </div>
   <fieldset [disabled]="status() === 'sending'">
