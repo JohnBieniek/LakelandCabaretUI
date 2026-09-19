@@ -1,5 +1,6 @@
 ﻿import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ContactForm } from './contact-form';
 import businessContent from '../content/business.json';
 import page from '../content/page.json';
 import serviceContent from '../content/services.json';
@@ -47,6 +48,7 @@ const priceData: {
 
 @Component({
   selector: 'app-root',
+  imports: [ContactForm],
   templateUrl: './app.html',
   styleUrl: './app.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -83,6 +85,7 @@ export class App {
   protected readonly emailHref =
     'mailto:' + encodeURIComponent(this.business.email) + '?subject=Event%20inquiry';
   protected readonly phoneHref = 'tel:' + this.business.phone.replace(/[^+\d]/g, '');
+  protected readonly contactServices = this.services.map((service) => service.content.title);
 
   constructor() {
     inject(Title).setTitle(seo.title);

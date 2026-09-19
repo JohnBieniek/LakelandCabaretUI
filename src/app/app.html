@@ -263,6 +263,7 @@
         }
       </dl>
     }
+    <app-contact-form [services]="contactServices" [email]="business.email" />
     <div class="contact-actions">
       <a class="button button-light" [href]="emailHref">{{ business.email }} <span>↗</span></a>
       <a class="phone-link" [href]="phoneHref">{{ business.phone }}</a>

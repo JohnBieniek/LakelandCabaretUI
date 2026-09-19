@@ -716,6 +716,7 @@ h2 {
   height: 32vw;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 50%;
+  pointer-events: none;
 }
 .contact::before {
   left: -16vw;
