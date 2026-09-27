@@ -60,27 +60,27 @@
       "items": [
         {
           "name": "Student or graduation session",
-          "price": "$350",
+          "price": "$100",
           "note": "1 hour"
         },
         {
           "name": "Family session",
-          "price": "$350–$600",
+          "price": "$100–$200",
           "note": "1–2 hours"
         },
         {
           "name": "Parade or sports coverage",
-          "price": "$600",
+          "price": "$200",
           "note": "2 hours"
         },
         {
           "name": "Event coverage",
-          "price": "$600–$1,200",
+          "price": "$200–$400",
           "note": "2–4 hours"
         },
         {
           "name": "Full wedding coverage",
-          "price": "$1,500",
+          "price": "$1,200",
           "note": "up to 6 hours"
         }
       ]
